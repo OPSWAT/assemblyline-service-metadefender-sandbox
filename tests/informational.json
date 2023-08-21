@@ -1,0 +1,768 @@
+{
+    "flowId": "64de1abb9489ac1ead366732",
+    "allFinished": true,
+    "allFilesDownloadFinished": true,
+    "allAdditionalStepsDone": true,
+    "reportsAmount": 1,
+    "priority": "max",
+    "pollPause": 5,
+    "fileSize": 85127,
+    "fileReadProgressBytes": 85127,
+    "reports": {
+        "21815d5f-3653-466e-a421-187423ca7b93": {
+            "finalVerdict": {
+                "verdict": "INFORMATIONAL",
+                "threatLevel": 0.1,
+                "confidence": 1
+            },
+            "allTags": [
+                {
+                    "source": "MEDIA_TYPE",
+                    "sourceIdentifier": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999",
+                    "isRootTag": true,
+                    "tag": {
+                        "name": "jpg",
+                        "synonyms": [],
+                        "descriptions": [],
+                        "verdict": {
+                            "verdict": "INFORMATIONAL",
+                            "threatLevel": 0.1,
+                            "confidence": 1
+                        }
+                    }
+                }
+            ],
+            "overallState": "success",
+            "taskReference": {
+                "name": "transform-file",
+                "additionalInfo": {
+                    "submitName": "test.jpg",
+                    "submitTime": 1692277437544,
+                    "digests": {
+                        "SHA-256": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999"
+                    }
+                },
+                "ID": "66a0a0b8-f34c-4ff0-9444-806b835bcb52",
+                "state": "SUCCESS",
+                "resourceReference": {
+                    "type": "TRANSFORM_FILE",
+                    "name": "file",
+                    "ID": "ec1be1b2-643d-49ea-9f55-488883809e56"
+                },
+                "opcount": 1,
+                "processTime": 730
+            },
+            "subtaskReferences": [
+                {
+                    "name": "osint",
+                    "additionalInfo": "ec1be1b2-643d-49ea-9f55-488883809e56",
+                    "ID": "68462a17-5f32-4b1e-befb-5e7b27cda813",
+                    "state": "SUCCESS",
+                    "resourceReference": {
+                        "type": "OSINT",
+                        "name": "osint",
+                        "ID": "fc076877-1fca-408c-9832-4053daa2497a"
+                    },
+                    "opcount": 4,
+                    "processTime": 1013
+                },
+                {
+                    "name": "osint-fuzzyhash",
+                    "additionalInfo": "ec1be1b2-643d-49ea-9f55-488883809e56",
+                    "ID": "4b35d389-023e-4254-b755-db0a6fa04303",
+                    "state": "SUCCESS",
+                    "resourceReference": {
+                        "type": "OSINT",
+                        "name": "osint",
+                        "ID": "e9ef88da-e220-4432-b900-f9e32168ded6"
+                    },
+                    "opcount": 2,
+                    "processTime": 1007
+                }
+            ],
+            "allSignalGroups": [
+                {
+                    "identifier": "I001",
+                    "description": "OSINT source detected benign resource(s)",
+                    "averageSignalStrength": 0.1,
+                    "peakSignalStrength": 0.1,
+                    "finalSignalStrength": 0.1,
+                    "verdict": {
+                        "verdict": "INFORMATIONAL",
+                        "threatLevel": 0.1,
+                        "confidence": 1
+                    },
+                    "allTags": [],
+                    "signals": [
+                        {
+                            "strength": 0.1,
+                            "isStrictlyBasedOnInputData": false,
+                            "signalReadable": "OSINT provider \"OPSWAT_REPUTATION\" detected resource \"02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999\" as \"INFORMATIONAL\"",
+                            "additionalInfo": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999",
+                            "originPath": "osint.results.verdict",
+                            "originType": "INPUT_FILE",
+                            "originIdentifier": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999"
+                        }
+                    ]
+                }
+            ],
+            "resources": {
+                "fc076877-1fca-408c-9832-4053daa2497a": {
+                    "results": [
+                        {
+                            "resource": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999",
+                            "origin": {
+                                "type": "INPUT_FILE",
+                                "identifier": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999"
+                            },
+                            "type": "FILE_HASH_SHA256",
+                            "osintProvider": "OPSWAT_REPUTATION",
+                            "data": {
+                                "scan_result_history_length": 200,
+                                "sandbox": false,
+                                "file_id": "bzIzMDgxNHZQY1M5WDFyMFA",
+                                "data_id": "bzIzMDgxNHZQY1M5WDFyMFBqYUpOX041LXJM",
+                                "sanitized": {
+                                    "result": "Allowed",
+                                    "progress_percentage": 100
+                                },
+                                "process_info": {
+                                    "progress_percentage": 100,
+                                    "profile": "multiscan_sanitize_unarchive",
+                                    "result": "Allowed",
+                                    "blocked_reason": "",
+                                    "file_type_skipped_scan": false,
+                                    "post_processing": {
+                                        "actions_failed": "",
+                                        "actions_ran": "Sanitized",
+                                        "converted_destination": "test_sanitized_by_OPSWAT_MetaDefender_9f66911cb65f4ff8826143f46715d0b2.jpg",
+                                        "converted_to": "jpg",
+                                        "copy_move_destination": "",
+                                        "sanitization_details": {
+                                            "details": [
+                                                {
+                                                    "action": "removed",
+                                                    "object_name": "icc profile"
+                                                },
+                                                {
+                                                    "action": "removed",
+                                                    "object_name": "metadata"
+                                                }
+                                            ],
+                                            "description": "Sanitized successfully."
+                                        }
+                                    }
+                                },
+                                "scan_results": {
+                                    "scan_details": {
+                                        "AegisLab": {
+                                            "scan_time": 0,
+                                            "def_time": "2023-08-14T05:36:28.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "AhnLab": {
+                                            "scan_time": 0,
+                                            "def_time": "2023-08-15T00:00:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Antiy": {
+                                            "scan_time": 0,
+                                            "def_time": "2023-08-14T16:17:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Avira": {
+                                            "scan_time": 5,
+                                            "def_time": "2023-08-14T08:09:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Bitdefender": {
+                                            "scan_time": 3,
+                                            "def_time": "2023-08-14T06:13:10.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "ClamAV": {
+                                            "scan_time": 13,
+                                            "def_time": "2023-08-14T07:37:02.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Comodo": {
+                                            "scan_time": 4,
+                                            "def_time": "2023-08-14T09:44:05.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "CrowdStrike Falcon ML": {
+                                            "scan_time": 1,
+                                            "def_time": "2023-08-14T00:00:00.000Z",
+                                            "scan_result_i": 23,
+                                            "threat_found": ""
+                                        },
+                                        "Emsisoft": {
+                                            "scan_time": 11,
+                                            "def_time": "2023-08-14T11:04:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "ESET": {
+                                            "scan_time": 1,
+                                            "def_time": "2023-08-14T07:51:17.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Filseclab": {
+                                            "scan_time": 190,
+                                            "def_time": "2023-08-13T22:55:37.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Huorong": {
+                                            "scan_time": 1,
+                                            "def_time": "2023-08-14T12:07:40.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "IKARUS": {
+                                            "scan_time": 3,
+                                            "def_time": "2023-08-14T07:45:07.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "K7": {
+                                            "scan_time": 0,
+                                            "def_time": "2023-08-14T09:17:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Kaspersky": {
+                                            "scan_time": 2,
+                                            "def_time": "2023-08-14T06:53:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "McAfee": {
+                                            "scan_time": 1,
+                                            "def_time": "2023-08-14T00:00:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Microsoft Defender": {
+                                            "scan_time": 0,
+                                            "def_time": "2023-08-14T05:36:04.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "NANOAV": {
+                                            "scan_time": 3,
+                                            "def_time": "2023-08-14T01:52:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Quick Heal": {
+                                            "scan_time": 0,
+                                            "def_time": "2023-08-13T17:15:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "RocketCyber": {
+                                            "scan_time": 1,
+                                            "def_time": "2023-08-14T00:00:00.000Z",
+                                            "scan_result_i": 23,
+                                            "threat_found": ""
+                                        },
+                                        "Scrutiny": {
+                                            "scan_time": 50,
+                                            "def_time": "2023-08-14T00:00:00.000Z",
+                                            "scan_result_i": 23,
+                                            "threat_found": ""
+                                        },
+                                        "Sophos": {
+                                            "scan_time": 22,
+                                            "def_time": "2023-08-13T22:33:12.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "TACHYON": {
+                                            "scan_time": 6,
+                                            "def_time": "2023-08-14T00:00:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Varist": {
+                                            "scan_time": 16,
+                                            "def_time": "2023-08-14T10:42:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "VirusBlokAda": {
+                                            "scan_time": 5,
+                                            "def_time": "2023-08-14T07:57:59.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Webroot SMD": {
+                                            "scan_time": 0,
+                                            "def_time": "2023-08-14T08:23:12.000Z",
+                                            "scan_result_i": 23,
+                                            "threat_found": ""
+                                        },
+                                        "Xvirus Anti-Malware": {
+                                            "scan_time": 11,
+                                            "def_time": "2023-08-10T20:28:26.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Zillya!": {
+                                            "scan_time": 0,
+                                            "def_time": "2023-08-12T08:36:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Trend Micro HouseCall": {
+                                            "scan_time": 1549,
+                                            "def_time": "2023-08-13T20:34:50.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Trend Micro": {
+                                            "scan_time": 1499,
+                                            "def_time": "2023-08-13T20:27:30.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Vir__IT eXplorer": {
+                                            "scan_time": 3,
+                                            "def_time": "2023-08-11T12:10:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Vir__IT ML": {
+                                            "scan_time": 0,
+                                            "def_time": "2023-08-11T12:10:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        }
+                                    },
+                                    "scan_all_result_i": 0,
+                                    "start_time": "2023-08-14T12:39:56.989Z",
+                                    "total_time": 1783,
+                                    "total_avs": 32,
+                                    "total_detected_avs": 0,
+                                    "progress_percentage": 100,
+                                    "scan_all_result_a": "No Threat Detected"
+                                },
+                                "file_info": {
+                                    "file_size": 85127,
+                                    "upload_timestamp": "2023-08-14T12:39:56.979Z",
+                                    "md5": "D528C749FC32D7E2D03D974817FE21CF",
+                                    "sha1": "01F2A0832BF71E08CD2FC94B084FC2F5C357425C",
+                                    "sha256": "02595A43F63A1ED021C2D6EA1FD7086565CAA1088CA06F46DF3BC2F56308F999",
+                                    "file_type_category": "G",
+                                    "file_type_description": "JPEG Image",
+                                    "file_type_extension": "jpg",
+                                    "display_name": "test.jpg"
+                                },
+                                "share_file": 1,
+                                "private_processing": 0,
+                                "rest_version": "4",
+                                "additional_info": [
+                                    "exif"
+                                ],
+                                "votes": {
+                                    "up": 0,
+                                    "down": 0
+                                },
+                                "stored": true
+                            },
+                            "verdict": "INFORMATIONAL",
+                            "tags": [],
+                            "lookupTime": 258
+                        }
+                    ],
+                    "relatedTaskType": "OSINT",
+                    "origin": {
+                        "type": "INPUT_FILE",
+                        "identifier": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999"
+                    },
+                    "resourceReference": {
+                        "type": "OSINT",
+                        "name": "osint",
+                        "ID": "fc076877-1fca-408c-9832-4053daa2497a"
+                    },
+                    "mediaType": {
+                        "string": "application/octet-stream",
+                        "slash": 11,
+                        "semicolon": 24,
+                        "parameters": {}
+                    },
+                    "signalGroupsByID": {
+                        "I001": {
+                            "identifier": "I001",
+                            "description": "OSINT source detected benign resource(s)",
+                            "averageSignalStrength": 0.1,
+                            "peakSignalStrength": 0.1,
+                            "finalSignalStrength": 0.1,
+                            "verdict": {
+                                "verdict": "INFORMATIONAL",
+                                "threatLevel": 0.1,
+                                "confidence": 1
+                            },
+                            "allTags": [],
+                            "signals": [
+                                {
+                                    "strength": 0.1,
+                                    "isStrictlyBasedOnInputData": false,
+                                    "signalReadable": "OSINT provider \"OPSWAT_REPUTATION\" detected resource \"02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999\" as \"INFORMATIONAL\"",
+                                    "additionalInfo": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999",
+                                    "originPath": "osint.results.verdict",
+                                    "originType": "INPUT_FILE",
+                                    "originIdentifier": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999"
+                                }
+                            ]
+                        }
+                    },
+                    "signalGroups": [
+                        {
+                            "identifier": "I001",
+                            "description": "OSINT source detected benign resource(s)",
+                            "averageSignalStrength": 0.1,
+                            "peakSignalStrength": 0.1,
+                            "finalSignalStrength": 0.1,
+                            "verdict": {
+                                "verdict": "INFORMATIONAL",
+                                "threatLevel": 0.1,
+                                "confidence": 1
+                            },
+                            "allTags": [],
+                            "signals": [
+                                {
+                                    "strength": 0.1,
+                                    "isStrictlyBasedOnInputData": false,
+                                    "signalReadable": "OSINT provider \"OPSWAT_REPUTATION\" detected resource \"02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999\" as \"INFORMATIONAL\"",
+                                    "additionalInfo": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999",
+                                    "originPath": "osint.results.verdict",
+                                    "originType": "INPUT_FILE",
+                                    "originIdentifier": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999"
+                                }
+                            ]
+                        }
+                    ],
+                    "allTags": [],
+                    "originVerdicts": [
+                        {
+                            "identifier": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999",
+                            "verdict": {
+                                "verdict": "INFORMATIONAL",
+                                "threatLevel": 0.1,
+                                "confidence": 1
+                            }
+                        }
+                    ],
+                    "verdict": {
+                        "verdict": "INFORMATIONAL",
+                        "threatLevel": 0.1,
+                        "confidence": 1
+                    },
+                    "notifications": []
+                },
+                "e9ef88da-e220-4432-b900-f9e32168ded6": {
+                    "results": [],
+                    "relatedTaskType": "OSINT_FUZZY_HASH",
+                    "origin": {
+                        "type": "INPUT_FILE",
+                        "identifier": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999"
+                    },
+                    "resourceReference": {
+                        "type": "OSINT",
+                        "name": "osint",
+                        "ID": "e9ef88da-e220-4432-b900-f9e32168ded6"
+                    },
+                    "mediaType": {
+                        "string": "application/octet-stream",
+                        "slash": 11,
+                        "semicolon": 24,
+                        "parameters": {}
+                    },
+                    "signalGroupsByID": {},
+                    "signalGroups": [],
+                    "allTags": [],
+                    "originVerdicts": [],
+                    "verdict": {
+                        "verdict": "UNKNOWN",
+                        "threatLevel": 0,
+                        "confidence": 1
+                    },
+                    "notifications": []
+                },
+                "ec1be1b2-643d-49ea-9f55-488883809e56": {
+                    "submitName": "test.jpg",
+                    "additionalTasks": [
+                        {
+                            "name": "osint",
+                            "additionalInfo": "ec1be1b2-643d-49ea-9f55-488883809e56",
+                            "ID": "68462a17-5f32-4b1e-befb-5e7b27cda813",
+                            "state": "IN_PROGRESS",
+                            "resourceReference": {
+                                "type": "OSINT",
+                                "name": "osint",
+                                "ID": "fc076877-1fca-408c-9832-4053daa2497a"
+                            },
+                            "opcount": 4,
+                            "processTime": 0
+                        },
+                        {
+                            "name": "osint-fuzzyhash",
+                            "additionalInfo": "ec1be1b2-643d-49ea-9f55-488883809e56",
+                            "ID": "4b35d389-023e-4254-b755-db0a6fa04303",
+                            "state": "IN_PROGRESS",
+                            "resourceReference": {
+                                "type": "OSINT",
+                                "name": "osint",
+                                "ID": "e9ef88da-e220-4432-b900-f9e32168ded6"
+                            },
+                            "opcount": 2,
+                            "processTime": 0
+                        }
+                    ],
+                    "additionalResources": [
+                        {
+                            "type": "OSINT",
+                            "name": "osint",
+                            "ID": "e9ef88da-e220-4432-b900-f9e32168ded6"
+                        },
+                        {
+                            "type": "OSINT",
+                            "name": "osint",
+                            "ID": "fc076877-1fca-408c-9832-4053daa2497a"
+                        }
+                    ],
+                    "isPartialData": false,
+                    "fileSize": 85127,
+                    "digests": {
+                        "SHA-256": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999",
+                        "SHA-1": "01f2a0832bf71e08cd2fc94b084fc2f5c357425c",
+                        "SHA-512": "263e8120cdb82597b9708dee232aef151ca8caa6fdd6fdc396efaf80303f5ba52e04b015b4fb9c01656dbae599238e55bbbd3742dc11b16d9c44131521970169",
+                        "MD5": "d528c749fc32d7e2d03d974817fe21cf"
+                    },
+                    "metaData": {
+                        "0": "'Created with GIMP'",
+                        "bitsPerPixel": "24",
+                        "colorType": "YCbCr",
+                        "comments": "1",
+                        "compressionAlgorithm": "JPEG",
+                        "entropy": 7.956908910383228,
+                        "forensicAnalysisRecommended": false,
+                        "format": "JPEG",
+                        "formatDetails": "Jpeg/JFIF v.1.1",
+                        "formatName": "JPEG (Joint Photographic Experts Group) Format",
+                        "fuzzyfsiohash": "9d5bf328fda1ff7f07839a774c2f7adb9e741dea9bd506aea3237241edd5ab93",
+                        "height": "595",
+                        "isProgressive": "true",
+                        "isTransparent": "false",
+                        "mimeType": "image/jpeg",
+                        "numberOfImages": "1",
+                        "physicalHeightDpi": "300",
+                        "physicalHeightInch": "1.9833333",
+                        "physicalWidthDpi": "300",
+                        "physicalWidthInch": "2.1",
+                        "usesPalette": "false",
+                        "width": "630"
+                    },
+                    "extendedData": {
+                        "fileMagicDescription": "JPEG image data, JFIF standard 1.01, resolution (DPI), density 300x300, segment length 16, comment: \"Created with GIMP\", progressive, precision 8, 630x595, components 3",
+                        "ssdeep": "1536:5CQURzX7KhE7qZ3A87rEgfI27vbhcRApobGCuQ4wytDzCCRQl24F8B7Y:5CQUlX7Kq7q68cjKbyGpoyS5CqJCB0"
+                    },
+                    "extractedFiles": [],
+                    "attemptedCertificateExtraction": false,
+                    "extractedUrls": [],
+                    "extractedDomains": [],
+                    "extractedIPs": [],
+                    "extractedEmails": [],
+                    "extractedHashesMD5": [],
+                    "extractedHashesSHA1": [],
+                    "extractedHashesSHA256": [],
+                    "extractedHashesSHA512": [],
+                    "extractedUUIDs": [],
+                    "extractedRegistryPathways": [],
+                    "extractedRevisionSaveIDs": [],
+                    "strings": [
+                        {
+                            "origin": {
+                                "type": "INPUT_FILE",
+                                "identifier": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999"
+                            },
+                            "references": [
+                                {
+                                    "str": "Created with GIMP",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 24
+                                    }
+                                },
+                                {
+                                    "str": "ICC_PROFILE",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 45
+                                    }
+                                },
+                                {
+                                    "str": "mntrRGB XYZ ",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 71
+                                    }
+                                },
+                                {
+                                    "str": "GIMP built-in sRG",
+                                    "type": "UTF8",
+                                    "metaData": {
+                                        "offset": 376
+                                    }
+                                },
+                                {
+                                    "str": "Public Domain",
+                                    "type": "UTF8",
+                                    "metaData": {
+                                        "offset": 440
+                                    }
+                                },
+                                {
+                                    "str": "f 0}\"[.{'5!",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 14245
+                                    }
+                                },
+                                {
+                                    "str": "2s@nO5v5#,6",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 17527
+                                    }
+                                },
+                                {
+                                    "str": "*</OB|1+S*",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 30045
+                                    }
+                                },
+                                {
+                                    "str": "?^&a=B]~aybj",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 45733
+                                    }
+                                },
+                                {
+                                    "str": "x0{J7'P6NH",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 49117
+                                    }
+                                },
+                                {
+                                    "str": "n32 K5.\".q",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 49571
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "origin": {
+                                "type": "IMAGE_OCR",
+                                "identifier": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999"
+                            },
+                            "references": [
+                                {
+                                    "str": " \n",
+                                    "type": "ASCII"
+                                }
+                            ]
+                        }
+                    ],
+                    "yaraMatches": [],
+                    "packersYara": [],
+                    "origin": {
+                        "type": "INPUT_FILE",
+                        "identifier": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999"
+                    },
+                    "resourceReference": {
+                        "type": "TRANSFORM_FILE",
+                        "name": "file",
+                        "ID": "ec1be1b2-643d-49ea-9f55-488883809e56"
+                    },
+                    "isDistributed": true,
+                    "mediaType": {
+                        "string": "image/jpeg",
+                        "slash": 5,
+                        "semicolon": 10,
+                        "parameters": {}
+                    },
+                    "signalGroupsByID": {},
+                    "signalGroups": [],
+                    "allTags": [
+                        {
+                            "source": "MEDIA_TYPE",
+                            "sourceIdentifier": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999",
+                            "isRootTag": true,
+                            "tag": {
+                                "name": "jpg",
+                                "synonyms": [],
+                                "descriptions": [],
+                                "verdict": {
+                                    "verdict": "INFORMATIONAL",
+                                    "threatLevel": 0.1,
+                                    "confidence": 1
+                                }
+                            }
+                        }
+                    ],
+                    "originVerdicts": [],
+                    "verdict": {
+                        "verdict": "INFORMATIONAL",
+                        "threatLevel": 0.1,
+                        "confidence": 1
+                    },
+                    "notifications": [],
+                    "private": false
+                }
+            },
+            "iocs": {},
+            "file": {
+                "name": "test.jpg",
+                "hash": "02595a43f63a1ed021c2d6ea1fd7086565caa1088ca06f46df3bc2f56308f999",
+                "type": "other"
+            },
+            "filesDownloadFinished": true,
+            "additionalStepsRunning": [],
+            "additionalStepsDone": true,
+            "created_date": "08/17/2023, 13:03:57",
+            "defaultOptionsUsed": false,
+            "scanOptions": {
+                "rapid_mode": null,
+                "osint": true,
+                "extended_osint": true,
+                "extracted_files_osint": true,
+                "visualization": true,
+                "files_download": true,
+                "resolve_domains": true,
+                "input_file_yara": true,
+                "extracted_files_yara": true,
+                "whois": true,
+                "ips_meta": true,
+                "images_ocr": true
+            },
+            "estimatedTime": "8",
+            "estimated_progress": 0.6759999990463257
+        }
+    }
+}
