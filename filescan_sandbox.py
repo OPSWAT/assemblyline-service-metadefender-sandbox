@@ -2,7 +2,7 @@ from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
 from assemblyline_v4_service.common.result import Result, ResultSection, Classification, BODY_FORMAT
 
-import json  # maybe not neccessary
+import json
 import base64
 import filescan_sandbox_result
 
