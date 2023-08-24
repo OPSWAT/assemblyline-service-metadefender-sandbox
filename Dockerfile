@@ -16,7 +16,7 @@ USER assemblyline
 WORKDIR /opt/al_service
 COPY . .
 
-ARG version_tag=4.4.0.50
+ARG version_tag=1.0.0
 USER root
 RUN sed -i -e "s/\$SERVICE_TAG/$version/g" service_manifest.yml
 

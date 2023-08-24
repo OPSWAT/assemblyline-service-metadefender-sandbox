@@ -91,7 +91,7 @@ heuristics:
 #  - the name of the docker container that will be created
 #  - CPU and ram allocation by the container
 docker_config:
-  image: ${REGISTRY}testing/assemblyline-service-opswat-filescan-sandbox:$SERVICE_TAG
+  image: ${REGISTRY}opswat/assemblyline-service-opswat-filescan-sandbox:$SERVICE_TAG
   cpu_cores: 1.0
   ram_mb: 1024
   allow_internet_access: true
