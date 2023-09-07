@@ -1,3 +1,4 @@
 pytest
 assemblyline-v4-service
 PyYAML
+urllib3
