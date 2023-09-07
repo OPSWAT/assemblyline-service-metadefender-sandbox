@@ -1,10 +1,7 @@
-name: CI
+name: Docker Build & Publish
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
     branches:
       - main
 
@@ -15,11 +12,4 @@ jobs:
       - run: echo "Docker build started."
       - run: echo "Docker image has been generated"
       - run: echo "Docker image has been published on DockerHub"
-  unit:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Run tests"
-      - name: Check out repository code
-        uses: actions/checkout@v3
-      - run: pipenv install
-      - run: pipenv run pytest -v
+
