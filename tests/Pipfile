@@ -6,3 +6,4 @@ verify_ssl = true
 [packages]
 pytest = "*"
 assemblyline-v4-service = "*"
+PyYAML = "==6.0.1"
