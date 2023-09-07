@@ -9,10 +9,11 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: Set up Python 3.10
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v4
         with:
           python-version: 3.10.13
       - name: Install pipenv
+        working-directory: ./tests
         run: pip install pipenv
       - name: Run tests
         working-directory: ./tests
