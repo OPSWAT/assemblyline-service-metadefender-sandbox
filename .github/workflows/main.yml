@@ -6,6 +6,10 @@ name: Docker Build & Publish
 #       - main
 on: [push]
 
+env:
+  REGISTRY: opswat
+  IMAGE_NAME: ${{ github.repository }}
+
 jobs:
   dockerbuild:
     runs-on: ubuntu-latest
@@ -23,9 +27,9 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: name/app
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
 
-      - run: echo "tag $steps.meta.outputs.tags"
-      - run: echo "label $steps.meta.outputs.labels"
+      - run: echo "tag ${{ steps.meta.outputs.tags }}"
+      - run: ${{ steps.meta.outputs.tags }}
 
