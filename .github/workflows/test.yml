@@ -22,11 +22,11 @@ jobs:
       # - name: Run tests
       #   working-directory: ./tests
       #   run: pipenv run pytest -v          
-      - name: Install dependencies
+      - name: Install pipenv
+        working-directory: ./tests
+        run: pip install pipenv
+      - name: Run tests
+        working-directory: ./tests
         run: |
-          python -m pip install --upgrade pip
-          pip install -r pipenv
-      - name: Test with pytest
-        run: |
-          pip install pytest 
-          pytest filescan_sandbox_test.py 
+          pipenv install
+          pipenv run pytest -v
