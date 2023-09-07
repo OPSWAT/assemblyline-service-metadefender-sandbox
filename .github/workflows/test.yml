@@ -20,7 +20,6 @@ jobs:
       - name: Install dependencies
         working-directory: ./tests
         run: |
-          pipenv --rm
           pipenv install --dev
       - name: Run tests
         working-directory: ./tests
