@@ -18,8 +18,7 @@ jobs:
       - name: Install dependencies
         working-directory: ./tests
         run: |
-          pipenv lock --dev
-          pipenv install --dev
+          python3 -m pipenv install --dev
       - name: Run tests
         working-directory: ./tests
-        run: pipenv run pytest -v
+        run: python3 -m pipenv run pytest -v
