@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+env:
+  DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USER }}
+  DOCKERHUB_PASS: ${{ secrets.DOCKERHUB_PASS }}
+
 jobs:
   dockerbuild:
     runs-on: ubuntu-latest
@@ -12,4 +16,5 @@ jobs:
       - run: echo "Docker build started."
       - run: echo "Docker image has been generated"
       - run: echo "Docker image has been published on DockerHub"
+      - run: echo "dockeruser is $DOCKERHUB_USER"
 
