@@ -136,6 +136,7 @@ def process_iocs(result_section, iocs):
         "LNK_PARSE": "static",
         "XOR_DECODING": "static",
         "INTERNAL": "static",
+        "PE_UNPACKING": "dynamic",
         "URL_RENDER": "dynamic",
         "JAVASCRIPT_EMULATION": "dynamic",
         "VISUALBASICSCRIPT_EMULATION": "dynamic",
