@@ -4,7 +4,11 @@ name: Docker Build & Publish
 #   push:
 #     branches:
 #       - main
-on: [push]
+# on: [push]
+on:
+  push:
+    tags: 
+      - '*'
 
 env:
   REGISTRY: opswat
@@ -27,9 +31,17 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          images: ${{ env.IMAGE_NAME }}
 
 
-      - run: echo "tag ${{ steps.meta.outputs.tags }}"
-      - run: ${{ steps.meta.outputs.tags }}
+      - run: echo "imagename ${{ env.IMAGE_NAME }}"
 
+      - run: echo "TAG ${{  github.ref_name }}"
+
+
+      # - name: Build and push
+      #   uses: docker/build-push-action@v4
+      #   with:
+      #     push: true
+      #     tags: ${{  github.ref_name }}
+      #     build-args: version=${{  github.ref_name }}
