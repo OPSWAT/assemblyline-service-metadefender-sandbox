@@ -4,15 +4,15 @@ name: Docker Build & Publish
 #   push:
 #     branches:
 #       - main
-# on: [push]
-on:
-  push:
-    tags: 
-      - '*'
+on: [push]
+# on:
+#   push:
+#     tags: 
+#       - '*'
 
 env:
   REGISTRY: opswat
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: ${{ github.repository.lowercase }}
 
 jobs:
   dockerbuild:
