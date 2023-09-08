@@ -12,7 +12,7 @@ on: [push]
 
 env:
   REGISTRY: opswat
-  IMAGE_NAME: ${{ github.repository.lowercase }}
+  IMAGE_NAME: ${{ github.repository },,}
 
 jobs:
   dockerbuild:
