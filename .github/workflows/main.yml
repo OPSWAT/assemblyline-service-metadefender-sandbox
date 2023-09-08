@@ -12,12 +12,16 @@ on: [push]
 
 env:
   REGISTRY: opswat
-  IMAGE_NAME: ${{ github.repository },,}
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   dockerbuild:
     runs-on: ubuntu-latest
     steps: 
+      - name: Lowercase repo
+        run: |
+          echo "REPO=${GITHUB_REPOSITORY,,}" >>${IMAGE_NAME}
+
       - name: Check out repository code
         uses: actions/checkout@v3
 
