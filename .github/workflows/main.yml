@@ -12,16 +12,12 @@ on: [push]
 
 env:
   REGISTRY: opswat
-  IMAGE_NAME: ${{ github.repository }}
+  REPO_NAME: ${{ github.event.repository.name }}
 
 jobs:
   dockerbuild:
     runs-on: ubuntu-latest
     steps: 
-      - name: Lowercase repo
-        run: |
-          echo "REPO=${GITHUB_REPOSITORY,,}" >>${IMAGE_NAME}
-
       - name: Check out repository code
         uses: actions/checkout@v3
 
@@ -35,10 +31,10 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ${{ env.IMAGE_NAME }}
+          images: ${{ env.REGISTRY }}/${{ env.REPO_NAME }}
 
 
-      - run: echo "imagename ${{ env.IMAGE_NAME }}"
+      - run: echo "imagename ${{ env.REPO_NAME }}"
 
       - run: echo "TAG ${{  github.ref_name }}"
 
