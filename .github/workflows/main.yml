@@ -13,9 +13,14 @@ jobs:
     steps:
       - name: Print branch name
         run: echo "Actual branch is ${{ github.ref }}."
+      - name: Dump github context
+        run: echo "$GITHUB_CONTEXT"
+        shell: bash
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
   print_name:
     if: github.ref != 'refs/heads/test'
     runs-on: ubuntu-latest
     steps:
       - name: Print branch name
-        run: echo "Actual branch is ${{ github.ref }}."
+        run: echo "Actual branch is ${{ github.ref }}.."
