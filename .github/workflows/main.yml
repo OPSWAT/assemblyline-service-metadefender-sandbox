@@ -1,6 +1,11 @@
 name: Docker Build & Publish
 
-on: [push]
+on:
+  push:
+    branches:
+      - '*test*'
+    tags: 
+      - '*'
 
 env:
   REGISTRY: opswat
