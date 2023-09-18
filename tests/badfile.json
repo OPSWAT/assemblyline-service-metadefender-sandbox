@@ -10037,7 +10037,7 @@
                         "data": "FedRetireSoftware.com",
                         "origins": [
                             {
-                                "type": "EXTERNAL_PARSER",
+                                "type": "VBA_EMULATION",
                                 "identifier": "834d1dbfab8330ea5f1844f6e905ed0ac19d1033ee9a9f1122ad2051c56783dc"
                             },
                             {

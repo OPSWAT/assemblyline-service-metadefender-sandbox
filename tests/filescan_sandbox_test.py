@@ -32,7 +32,7 @@ class TestFilescanSandboxResult:
         origin_path = f"{parent_dir}/{filename}"
         target_path = f"{parent_dir}/tests/{filename}"
         if not os.path.exists(target_path):
-            shutil.copyfile(origin_path,target_path)
+            shutil.copyfile(origin_path, target_path)
 
     @classmethod
     def teardown_class(cls):
@@ -196,9 +196,14 @@ class TestFilescanSandboxResult:
         compact_result = filescan_sandbox_result.process_iocs(rs, raw_response)
         tags = {
             "network.email.address": ["ActivationDepartment@FedRetireSoftware.com"],
-            "network.static.uri": ["https://FedRetireSoftware.com/"],
+            "network.static.uri": [
+                "https://FedRetireSoftware.com/",
+                "http://www.FedRetireSoftware.com",
+                "http://FedRetireSoftware.com",
+            ],
             "network.static.ip": ["209.182.199.110"],
             "network.static.domain": ["FedRetireSoftware.com"],
+            "network.dynamic.domain": ["FedRetireSoftware.com"],
         }
         assert rs.tags == tags
 
