@@ -10,12 +10,12 @@ jobs:
   dockerbuild:
     if: github.ref == 'refs/heads/test'
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Print branch name
-        run: echo "Actual bracnh is ${{ github.ref }}."
+        run: echo "Actual branch is ${{ github.ref }}."
   print_name:
-    if: github.ref != 'refs/heads/main'
+    if: github.ref != 'refs/heads/test'
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Print branch name
-        run: echo "Actual bracnh is ${{ github.ref }}."
+        run: echo "Actual branch is ${{ github.ref }}."
