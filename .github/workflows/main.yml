@@ -12,7 +12,7 @@ env:
 jobs:
   dockerbuild:
     runs-on: ubuntu-latest
-    if: github.event.repository.name == 'main'
+    if: github.ref == 'refs/heads/main'
     steps: 
       - name: Check out repository code
         uses: actions/checkout@v3
