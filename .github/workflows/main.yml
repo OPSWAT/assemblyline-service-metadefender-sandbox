@@ -3,7 +3,8 @@ name: Docker Build & Publish
 on:
   push:
     tags: 
-      - '*'
+    #  Assemblyline tags start with 4.4.
+      - '4.4.*'
 
 env:
   REGISTRY: opswat
@@ -12,7 +13,6 @@ env:
 jobs:
   dockerbuild:
     runs-on: ubuntu-latest
-    # if: github.ref == 'refs/heads/main'
     steps: 
       - name: Check out repository code
         uses: actions/checkout@v3
@@ -27,13 +27,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          push: false
+          push: true
           tags: ${{ env.REGISTRY }}/${{ env.REPO_NAME }}:${{  github.ref_name }}
           build-args: version=${{  github.ref_name }}
-  print_branch_name:
-    runs-on: ubuntu-latest
-    if: github.ref != 'refs/heads/main'
-    steps:
-      - name: Print branch name
-        run: echo "Actual branch is ${{ github.ref }}."
   
