@@ -1,9 +1,9 @@
 # Name of the service
-name: OPSWAT_Filescan_Sandbox
+name: MetaDefender_Sandbox
 # Version of the service
 version: $SERVICE_TAG
 
-description: This Assemblyline service interfaces with the OPSWAT Filescan Sandbox, detonating files and URLs. This integration was developed by OPSWAT. (C) OPSWAT, Inc.
+description: This Assemblyline service interfaces with the MetaDefender Sandbox -previously known as OPSWAT Filescan Sandbox-, detonating files and URLs. This integration was developed by OPSWAT. (C) OPSWAT, Inc.
 
 accepts: .*
 rejects: empty
@@ -26,62 +26,62 @@ uses_metadata: true
 # >= 1000: malicious
 
 heuristics:
-  - description: OPSWAT Filescan Sandbox determined that the file is benign.
+  - description: MetaDefender Sandbox determined that the file is benign.
     filetype: "*"
     heur_id: 1
-    name: Filescan Sandbox verdict is benign.
+    name: MetaDefender Sandbox verdict is benign.
     score: -1000
-  - description: OPSWAT Filescan Sandbox signal group is benign.
+  - description: MetaDefender Sandbox signal group is benign.
     filetype: "*"
     heur_id: 2
     name: Benign threat indicators
     score: -1000
-  - description: OPSWAT Filescan Sandbox determined that the file is informational/no threat.
+  - description: MetaDefender Sandbox determined that the file is informational/no threat.
     filetype: "*"
     heur_id: 3
-    name: Filescan Sandbox verdict is no threat.
+    name: MetaDefender Sandbox verdict is no threat.
     score: 150
-  - description: OPSWAT Filescan Sandbox signal group is informational/no threat.
+  - description: MetaDefender Sandbox signal group is informational/no threat.
     filetype: "*"
     heur_id: 4
     name: Informational threat indicators
     score: 150
-  - description: OPSWAT Filescan Sandbox determined that the file is unknown.
+  - description: MetaDefender Sandbox determined that the file is unknown.
     filetype: "*"
     heur_id: 5
-    name: Filescan Sandbox verdict is unknown
+    name: MetaDefender Sandbox verdict is unknown
     score: 299
-  - description: OPSWAT Filescan Sandbox signal group is unknown.
+  - description: MetaDefender Sandbox signal group is unknown.
     filetype: "*"
     heur_id: 6
     name: Unknown threat indicators
     score: 299
-  - description: OPSWAT Filescan Sandbox determined that the file is suspicious.
+  - description: MetaDefender Sandbox determined that the file is suspicious.
     filetype: "*"
     heur_id: 7
-    name: Filescan Sandbox verdict is suspicious
+    name: MetaDefender Sandbox verdict is suspicious
     score: 500
-  - description: OPSWAT Filescan Sandbox signal group is suspicious.
+  - description: MetaDefender Sandbox signal group is suspicious.
     filetype: "*"
     heur_id: 8
     name: Suspicious threat indicators
     score: 500
-  - description: OPSWAT Filescan Sandbox determined that the file is likely malicious.
+  - description: MetaDefender Sandbox determined that the file is likely malicious.
     filetype: "*"
     heur_id: 9
-    name: Filescan Sandbox verdict is likely malicious
+    name: MetaDefender Sandbox verdict is likely malicious
     score: 850
-  - description: OPSWAT Filescan Sandbox signal group is likely malicious.
+  - description: MetaDefender Sandbox signal group is likely malicious.
     filetype: "*"
     heur_id: 10
     name: Likely malicious threat indicators
     score: 850
-  - description: OPSWAT Filescan Sandbox determined that the file is malicious.
+  - description: MetaDefender Sandbox determined that the file is malicious.
     filetype: "*"
     heur_id: 11
-    name: Filescan Sandbox verdict is malicious
+    name: MetaDefender Sandbox verdict is malicious
     score: 1000
-  - description: OPSWAT Filescan Sandbox signal group is malicious.
+  - description: MetaDefender Sandbox signal group is malicious.
     filetype: "*"
     heur_id: 12
     name: Malicious threat indicators
@@ -91,7 +91,7 @@ heuristics:
 #  - the name of the docker container that will be created
 #  - CPU and ram allocation by the container
 docker_config:
-  image: ${REGISTRY}opswat/assemblyline-service-opswat-filescan-sandbox:$SERVICE_TAG
+  image: ${REGISTRY}opswat/assemblyline-service-metadefender-sandbox:$SERVICE_TAG
   cpu_cores: 1.0
   ram_mb: 1024
   allow_internet_access: true

@@ -2,7 +2,7 @@ FROM cccs/assemblyline-v4-service-base:stable
 
 # Python path to the service class from your service directory
 #  The following example refers to the class "Sample" from the "sample.py" file
-ENV SERVICE_PATH filescan_sandbox.FilescanSandbox
+ENV SERVICE_PATH metadefender_sandbox.MetaDefenderSandbox
 
 # Install any service dependencies here
 # For example: RUN apt-get update && apt-get install -y libyaml-dev
@@ -16,7 +16,7 @@ USER assemblyline
 WORKDIR /opt/al_service
 COPY . .
 
-ARG version=4.4.1.dev1
+ARG version=4.4.1.dev2
 USER root
 RUN sed -i -e "s/\$SERVICE_TAG/$version/g" service_manifest.yml
 

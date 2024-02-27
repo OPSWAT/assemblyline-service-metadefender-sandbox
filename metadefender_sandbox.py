@@ -4,7 +4,7 @@ from assemblyline_v4_service.common.result import Result, ResultSection, Classif
 
 import json
 import base64
-import filescan_sandbox_result
+import metadefender_sandbox_result
 
 import time
 import requests
@@ -42,9 +42,9 @@ def requests_retry_session(
     return session
 
 
-class FilescanSandbox(ServiceBase):
+class MetaDefenderSandbox(ServiceBase):
     def __init__(self, config=None):
-        super(FilescanSandbox, self).__init__(config)
+        super(MetaDefenderSandbox, self).__init__(config)
         self.api_key = self.config.get("api_key")
         self.host = self.config.get("host")
         self.headers = {}
@@ -57,7 +57,7 @@ class FilescanSandbox(ServiceBase):
         #   Your service might have to do some warming up on startup to make things faster
 
         self.log.info(f"start() from {self.service_attributes.name} service called")
-        self.log.debug("OPSWAT Filescan Sandbox service started")
+        self.log.debug("MetaDefender Sandbox service started")
 
 
     def post_sample(self, request: ServiceRequest, url=None, file_path=None):
@@ -178,7 +178,7 @@ class FilescanSandbox(ServiceBase):
             assert self.poll_interval > 0 and self.timeout > 0, "Poll interval or timeout is not appropriate"
         except Exception as e:
             self.log.error(
-                "No API key or Host found for OPSWAT Filescan Sandbox. Error: {e!r}"
+                "No API key or Host found for MetaDefender Sandbox. Error: {e!r}"
             )
             raise e
 
@@ -188,10 +188,10 @@ class FilescanSandbox(ServiceBase):
         response = {}
         try:
             if submitted_url:
-                self.log.info("OPSWAT Filescan Sandbox start to scan a file")
+                self.log.info("MetaDefender Sandbox start to scan a file")
                 response = self.post_sample(request, url=submitted_url)
             elif submitted_file:
-                self.log.info("OPSWAT Filescan Sandbox start to scan an URL")
+                self.log.info("MetaDefender Sandbox start to scan an URL")
                 response = self.post_sample(request, file_path=submitted_file)
         except Exception as e:
             self.log.error(f"Error occurred when scan a file/URL: {e!r}")
@@ -204,23 +204,23 @@ class FilescanSandbox(ServiceBase):
             rejected = response.get("rejected_files", None)
             if rejected:
                 for rejection in rejected:
-                    rejection_result = ResultSection('OPSWAT Filescan Sandbox rejection',
+                    rejection_result = ResultSection('MetaDefender Sandbox rejection',
                                                     body_format=BODY_FORMAT.KEY_VALUE,
                                                     body=json.dumps(rejection))
                     result.add_section(rejection_result)
 
             if response.get("reports", {}):
-                result = filescan_sandbox_result.result_parser(result, response)
+                result = metadefender_sandbox_result.result_parser(result, response)
             else:
-                self.log.warning(f"There is no OPSWAT Filescan Sandbox reports.")
+                self.log.warning(f"There is no MetaDefender Sandbox reports.")
 
             report_link = f"{self.host}/uploads/{response.get('flowId')}"
-            report_link_rs = ResultSection('OPSWAT Filescan Sandbox full report is available here:',
+            report_link_rs = ResultSection('MetaDefender Sandbox full report is available here:',
                 body_format=BODY_FORMAT.URL,
-                body=json.dumps({"name": "Filescan Sandbox report", "url": report_link}))
+                body=json.dumps({"name": "MetaDefender Sandbox report", "url": report_link}))
             result.add_section(report_link_rs)
 
         else:
-            self.log.warning(f"There is no OPSWAT Filescan Sandbox response.")
+            self.log.warning(f"There is no MetaDefender Sandbox response.")
 
         request.result = result

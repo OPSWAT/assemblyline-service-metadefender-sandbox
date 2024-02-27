@@ -8,7 +8,7 @@ import os
 
 
 sys.path.append("..")
-import filescan_sandbox_result
+import metadefender_sandbox_result
 from assemblyline_v4_service.common.result import (
     Result,
     ResultSection,
@@ -22,7 +22,7 @@ def util_load_json(path: str) -> Any:
         return json.loads(f.read())
 
 
-class TestFilescanSandboxResult:
+class TestMetaDefenderSandboxResult:
     @classmethod
     def setup_class(cls):
         # copy yml
@@ -51,7 +51,7 @@ class TestFilescanSandboxResult:
             .get("reports", {})
             .get("93a90ffb-1aac-43f6-abdd-c579d6ae14df", {})
         )
-        compact_result = filescan_sandbox_result.parse_compact_result(
+        compact_result = metadefender_sandbox_result.parse_compact_result(
             raw_response,
             "93a90ffb-1aac-43f6-abdd-c579d6ae14df",
             "64d1fb9c2a1db2a88ac17017",
@@ -76,7 +76,7 @@ class TestFilescanSandboxResult:
             .get("reports", {})
             .get("21815d5f-3653-466e-a421-187423ca7b93", {})
         )
-        compact_result = filescan_sandbox_result.parse_compact_result(
+        compact_result = metadefender_sandbox_result.parse_compact_result(
             raw_response,
             "21815d5f-3653-466e-a421-187423ca7b93",
             "64de1abb9489ac1ead366732",
@@ -101,7 +101,7 @@ class TestFilescanSandboxResult:
             .get("reports", {})
             .get("d389e943-dc72-4070-aade-1d11f0457ea3", {})
         )
-        compact_result = filescan_sandbox_result.parse_compact_result(
+        compact_result = metadefender_sandbox_result.parse_compact_result(
             raw_response,
             "d389e943-dc72-4070-aade-1d11f0457ea3",
             "64de19f4a29d57e20384dac6",
@@ -146,7 +146,7 @@ class TestFilescanSandboxResult:
     @staticmethod
     def test_parse_compact_result_empty():
         raw_response = {}
-        compact_result = filescan_sandbox_result.parse_compact_result(
+        compact_result = metadefender_sandbox_result.parse_compact_result(
             raw_response,
             "93a90ffb-1aac-43f6-abdd-c579d6ae14df",
             "64d1fb9c2a1db2a88ac17017",
@@ -175,7 +175,7 @@ class TestFilescanSandboxResult:
 
         rs = ResultSection("Test", body_format=BODY_FORMAT.TEXT, body="test")
 
-        compact_result = filescan_sandbox_result.process_allSignalGroups(
+        compact_result = metadefender_sandbox_result.process_allSignalGroups(
             rs, raw_response
         )
 
@@ -193,7 +193,7 @@ class TestFilescanSandboxResult:
 
         rs = ResultSection("Test", body_format=BODY_FORMAT.TEXT, body="test")
 
-        compact_result = filescan_sandbox_result.process_iocs(rs, raw_response)
+        compact_result = metadefender_sandbox_result.process_iocs(rs, raw_response)
         tags = {
             "network.email.address": ["ActivationDepartment@FedRetireSoftware.com"],
             "network.static.uri": [
@@ -218,7 +218,7 @@ class TestFilescanSandboxResult:
 
         rs = ResultSection("Test", body_format=BODY_FORMAT.TEXT, body="test")
 
-        compact_result = filescan_sandbox_result.process_allOsintTags(rs, raw_response)
+        compact_result = metadefender_sandbox_result.process_allOsintTags(rs, raw_response)
         tags = {"av.virus_name": ["emotet", "geodo"]}
         assert rs.tags == tags
 
@@ -233,7 +233,7 @@ class TestFilescanSandboxResult:
 
         rs = ResultSection("Test", body_format=BODY_FORMAT.TEXT, body="test")
 
-        compact_result = filescan_sandbox_result.process_resources(rs, raw_response)
+        compact_result = metadefender_sandbox_result.process_resources(rs, raw_response)
         tags = {
             "av.virus_name": ["Trojan/Riskware!my0NYEEN"],
             "attribution.family": ["riskware"],
