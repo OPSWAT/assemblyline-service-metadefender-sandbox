@@ -3,8 +3,8 @@ name: Docker Build & Publish
 on:
   push:
     tags: 
-    #  Assemblyline tags start with 4.4.
-      - '4.4.*'
+    #  Assemblyline tags start with 4.4. or 4.5.
+      - '4.5.*'
 
 env:
   REGISTRY: opswat

@@ -274,7 +274,7 @@ def process_resources(result_section, resources):
 def parse_report(report, report_id, flow_id):
     compact_result = parse_compact_result(report, report_id, flow_id)
     verdict_rs = ResultSection(
-        "OPSWAT Filescan Sandbox result",
+        "MetaDefender Sandbox result",
         body_format=BODY_FORMAT.KEY_VALUE,
         body=json.dumps(compact_result),
     )
