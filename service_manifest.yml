@@ -20,7 +20,7 @@ enabled: true
 uses_metadata: true
 
 # -1000: safe
-# 0 - 299: informational
+# 0 - 299: no_threat/informational
 # 300 - 699: suspicious
 # 700 - 999: highly suspicious
 # >= 1000: malicious
@@ -36,15 +36,15 @@ heuristics:
     heur_id: 2
     name: Benign threat indicators
     score: -1000
-  - description: MetaDefender Sandbox determined that the file is informational/no threat.
+  - description: MetaDefender Sandbox determined that the file is no threat/informational.
     filetype: "*"
     heur_id: 3
     name: MetaDefender Sandbox verdict is no threat.
     score: 150
-  - description: MetaDefender Sandbox signal group is informational/no threat.
+  - description: MetaDefender Sandbox signal group is no threat/informational.
     filetype: "*"
     heur_id: 4
-    name: Informational threat indicators
+    name: No threat indicators
     score: 150
   - description: MetaDefender Sandbox determined that the file is unknown.
     filetype: "*"

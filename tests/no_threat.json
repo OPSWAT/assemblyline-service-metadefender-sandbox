@@ -1,0 +1,2788 @@
+{
+    "flowId": "66b3763be7dbbbdfcd0a6a96",
+    "allFinished": true,
+    "allFilesDownloadFinished": true,
+    "allAdditionalStepsDone": true,
+    "reportsAmount": 1,
+    "priority": "max",
+    "pollPause": 5,
+    "state": "finished",
+    "scanStartedDate": "08/07/2024, 13:27:26",
+    "fileSize": 1293537,
+    "fileReadProgressBytes": 1293537,
+    "reports": {
+        "357042f5-bbf9-4486-b7c4-351495a94a13": {
+            "finalVerdict": {
+                "verdict": "NO_THREAT",
+                "threatLevel": 0.1,
+                "confidence": 1
+            },
+            "allTags": [
+                {
+                    "source": "MEDIA_TYPE",
+                    "sourceIdentifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+                    "isRootTag": true,
+                    "tag": {
+                        "name": "png",
+                        "synonyms": [],
+                        "descriptions": [],
+                        "verdict": {
+                            "verdict": "NO_THREAT",
+                            "threatLevel": 0.1,
+                            "confidence": 1
+                        }
+                    }
+                }
+            ],
+            "overallState": "success_partial",
+            "taskReference": {
+                "name": "transform-file",
+                "additionalInfo": {
+                    "submitName": "gabi_bogre.png",
+                    "submitTime": 1723037247064,
+                    "digests": {
+                        "SHA-256": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                    }
+                },
+                "ID": "37c43f9c-79c3-440e-9ac5-7279695d0c9a",
+                "state": "SUCCESS",
+                "resourceReference": {
+                    "type": "TRANSFORM_FILE",
+                    "name": "file",
+                    "ID": "08af2f52-ce89-4faf-ad51-2138e529d1d6"
+                },
+                "opcount": 1,
+                "processTime": 2238
+            },
+            "subtaskReferences": [
+                {
+                    "name": "osint",
+                    "additionalInfo": "FILE_HASH_SHA256",
+                    "ID": "8c9e1e3e-8811-433a-87af-b41ea96f3e0d",
+                    "state": "SUCCESS",
+                    "resourceReference": {
+                        "type": "OSINT",
+                        "name": "osint",
+                        "ID": "af5cf32b-caef-42d6-9cd0-7c6544d278e6"
+                    },
+                    "opcount": 2,
+                    "processTime": 1018
+                },
+                {
+                    "name": "domain-resolve",
+                    "additionalInfo": 1,
+                    "ID": "34d5602a-a0d4-4b1b-a9fb-3c4ffa6e8331",
+                    "state": "SUCCESS",
+                    "resourceReference": {
+                        "type": "DOMAIN_RESOLVE",
+                        "name": "domain-resolve",
+                        "ID": "1e9ff699-2b17-4800-8ebc-4607d537e63b"
+                    },
+                    "opcount": 0,
+                    "processTime": 143
+                },
+                {
+                    "name": "file-download",
+                    "additionalInfo": 1,
+                    "ID": "e50f51dc-4505-4a48-8b6f-21ad969413cf",
+                    "state": "SUCCESS_PARTIAL",
+                    "resourceReference": {
+                        "type": "FILE_DOWNLOAD",
+                        "name": "file-download",
+                        "ID": "5a1550f9-34d7-4693-b212-ee4f0bb82a90"
+                    },
+                    "opcount": 1,
+                    "processTime": 170
+                },
+                {
+                    "name": "osint-ex",
+                    "additionalInfo": "URL",
+                    "ID": "e8507c0b-cf69-45cb-aeb5-763ee5fab04f",
+                    "state": "SUCCESS",
+                    "resourceReference": {
+                        "type": "OSINT",
+                        "name": "osint",
+                        "ID": "8072ff09-5a1e-4e93-a21c-cf110446cd89"
+                    },
+                    "opcount": 2,
+                    "processTime": 2017
+                },
+                {
+                    "name": "osint-ex",
+                    "additionalInfo": "DOMAIN",
+                    "ID": "c23ac324-4b9a-444c-8907-f81cd909dd50",
+                    "state": "SUCCESS",
+                    "resourceReference": {
+                        "type": "OSINT",
+                        "name": "osint",
+                        "ID": "3caddf8f-924c-4856-a9d4-8e0528772aaa"
+                    },
+                    "opcount": 2,
+                    "processTime": 1010
+                },
+                {
+                    "name": "osint-fuzzyhash",
+                    "additionalInfo": "FILE_HASH_SHA256",
+                    "ID": "b46f621f-7cf0-4ec8-b3c6-125069dc70a5",
+                    "state": "SUCCESS",
+                    "resourceReference": {
+                        "type": "OSINT",
+                        "name": "osint",
+                        "ID": "bcaa0fd4-abd3-4e44-88a4-a59261d2e47d"
+                    },
+                    "opcount": 2,
+                    "processTime": 11
+                }
+            ],
+            "allSignalGroups": [
+                {
+                    "identifier": "I001",
+                    "recommendsFullScan": false,
+                    "description": "OSINT source detected benign resource(s)",
+                    "averageSignalStrength": 0.1,
+                    "peakSignalStrength": 0.1,
+                    "finalSignalStrength": 0.1,
+                    "verdict": {
+                        "verdict": "NO_THREAT",
+                        "threatLevel": 0.1,
+                        "confidence": 1
+                    },
+                    "allTags": [],
+                    "signals": [
+                        {
+                            "strength": 0.1,
+                            "isStrictlyBasedOnInputData": false,
+                            "signalReadable": "OSINT provider \"OPSWAT_REPUTATION\" detected resource \"b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325\" as \"NO_THREAT\"",
+                            "additionalInfo": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+                            "originPath": "osint.results.verdict",
+                            "originType": "INPUT_FILE",
+                            "originIdentifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+                            "impactsFinalVerdict": true
+                        }
+                    ]
+                },
+                {
+                    "identifier": "I001",
+                    "recommendsFullScan": false,
+                    "description": "OSINT source detected benign resource(s)",
+                    "averageSignalStrength": 0.1,
+                    "peakSignalStrength": 0.1,
+                    "finalSignalStrength": 0.1,
+                    "verdict": {
+                        "verdict": "NO_THREAT",
+                        "threatLevel": 0.1,
+                        "confidence": 1
+                    },
+                    "allTags": [],
+                    "signals": [
+                        {
+                            "strength": 0.1,
+                            "isStrictlyBasedOnInputData": false,
+                            "signalReadable": "OSINT provider \"OFFLINE_URL_REPUTATION\" detected resource \"http://yl.ml.md\" as \"NO_THREAT\"",
+                            "additionalInfo": "http://yl.ml.md",
+                            "originPath": "osint.results.verdict",
+                            "originType": "INPUT_FILE",
+                            "originIdentifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+                            "impactsFinalVerdict": true
+                        }
+                    ]
+                }
+            ],
+            "resources": {
+                "bcaa0fd4-abd3-4e44-88a4-a59261d2e47d": {
+                    "results": [],
+                    "relatedTaskType": "OSINT_FUZZY_HASH",
+                    "origin": {
+                        "type": "INPUT_FILE",
+                        "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                    },
+                    "resourceReference": {
+                        "type": "OSINT",
+                        "name": "osint",
+                        "ID": "bcaa0fd4-abd3-4e44-88a4-a59261d2e47d"
+                    },
+                    "mediaType": {
+                        "string": "application/octet-stream",
+                        "slash": 11,
+                        "semicolon": 24,
+                        "parameters": {}
+                    },
+                    "signalGroupsByID": {},
+                    "signalGroups": [],
+                    "allTags": [],
+                    "originVerdicts": [],
+                    "verdict": {
+                        "verdict": "UNKNOWN",
+                        "threatLevel": 0,
+                        "confidence": 1
+                    },
+                    "notifications": []
+                },
+                "3caddf8f-924c-4856-a9d4-8e0528772aaa": {
+                    "results": [
+                        {
+                            "resource": "yl.ml.md",
+                            "origin": {
+                                "type": "INPUT_FILE",
+                                "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                            },
+                            "type": "DOMAIN",
+                            "osintProvider": "OPSWAT_REPUTATION",
+                            "data": {
+                                "address": "yl.ml.md",
+                                "lookup_results": {
+                                    "start_time": "2024-08-07T13:27:29.129Z",
+                                    "detected_by": 0,
+                                    "sources": [
+                                        {
+                                            "provider": "webroot.com",
+                                            "assessment": "trustworthy",
+                                            "category": "Training and Tools",
+                                            "detect_time": "",
+                                            "update_time": "2024-08-07T13:27:29.174Z",
+                                            "status": 0
+                                        },
+                                        {
+                                            "provider": "reputation.alienvault.com",
+                                            "assessment": "",
+                                            "detect_time": "",
+                                            "update_time": "2024-08-07T13:27:29.205Z",
+                                            "status": 5
+                                        },
+                                        {
+                                            "provider": "danger.rulez.sk",
+                                            "assessment": "",
+                                            "detect_time": "",
+                                            "update_time": "2024-08-07T13:27:29.205Z",
+                                            "status": 5
+                                        },
+                                        {
+                                            "provider": "feodotracker.abuse.ch",
+                                            "assessment": "",
+                                            "detect_time": "",
+                                            "update_time": "2024-08-07T13:27:29.205Z",
+                                            "status": 5
+                                        },
+                                        {
+                                            "provider": "spamhaus.org",
+                                            "assessment": "",
+                                            "detect_time": "",
+                                            "update_time": "2024-08-07T13:27:29.205Z",
+                                            "status": 5
+                                        },
+                                        {
+                                            "provider": "isc.sans.edu",
+                                            "assessment": "",
+                                            "detect_time": "",
+                                            "update_time": "2024-08-07T13:27:29.205Z",
+                                            "status": 5
+                                        }
+                                    ]
+                                }
+                            },
+                            "verdict": "UNKNOWN",
+                            "tags": [],
+                            "lookupTime": 0,
+                            "activable": true
+                        }
+                    ],
+                    "relatedTaskType": "OSINT_EXTENDED",
+                    "origin": {
+                        "type": "INPUT_FILE",
+                        "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                    },
+                    "resourceReference": {
+                        "type": "OSINT",
+                        "name": "osint",
+                        "ID": "3caddf8f-924c-4856-a9d4-8e0528772aaa"
+                    },
+                    "mediaType": {
+                        "string": "application/octet-stream",
+                        "slash": 11,
+                        "semicolon": 24,
+                        "parameters": {}
+                    },
+                    "signalGroupsByID": {},
+                    "signalGroups": [],
+                    "allTags": [],
+                    "originVerdicts": [],
+                    "verdict": {
+                        "verdict": "UNKNOWN",
+                        "threatLevel": 0,
+                        "confidence": 1
+                    },
+                    "notifications": []
+                },
+                "8072ff09-5a1e-4e93-a21c-cf110446cd89": {
+                    "results": [
+                        {
+                            "resource": "http://yl.ml.md",
+                            "origin": {
+                                "type": "INPUT_FILE",
+                                "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                            },
+                            "type": "URL",
+                            "osintProvider": "OPSWAT_REPUTATION",
+                            "data": {
+                                "address": "http://yl.ml.md",
+                                "lookup_results": {
+                                    "start_time": "2024-08-07T13:27:29.137Z",
+                                    "detected_by": 0,
+                                    "sources": [
+                                        {
+                                            "provider": "webroot.com",
+                                            "assessment": "trustworthy",
+                                            "category": "Training and Tools",
+                                            "detect_time": "",
+                                            "update_time": "2024-08-07T13:27:29.212Z",
+                                            "status": 0
+                                        },
+                                        {
+                                            "provider": "reputation.alienvault.com",
+                                            "assessment": "",
+                                            "detect_time": "",
+                                            "update_time": "2024-08-07T13:27:29.204Z",
+                                            "status": 5
+                                        },
+                                        {
+                                            "provider": "danger.rulez.sk",
+                                            "assessment": "",
+                                            "detect_time": "",
+                                            "update_time": "2024-08-07T13:27:29.204Z",
+                                            "status": 5
+                                        },
+                                        {
+                                            "provider": "feodotracker.abuse.ch",
+                                            "assessment": "",
+                                            "detect_time": "",
+                                            "update_time": "2024-08-07T13:27:29.204Z",
+                                            "status": 5
+                                        },
+                                        {
+                                            "provider": "spamhaus.org",
+                                            "assessment": "",
+                                            "detect_time": "",
+                                            "update_time": "2024-08-07T13:27:29.204Z",
+                                            "status": 5
+                                        },
+                                        {
+                                            "provider": "isc.sans.edu",
+                                            "assessment": "",
+                                            "detect_time": "",
+                                            "update_time": "2024-08-07T13:27:29.204Z",
+                                            "status": 5
+                                        }
+                                    ]
+                                }
+                            },
+                            "verdict": "UNKNOWN",
+                            "tags": [],
+                            "lookupTime": 0,
+                            "activable": true
+                        },
+                        {
+                            "resource": "http://yl.ml.md",
+                            "origin": {
+                                "type": "INPUT_FILE",
+                                "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                            },
+                            "type": "URL",
+                            "osintProvider": "OFFLINE_URL_REPUTATION",
+                            "data": {
+                                "suspiciousness": 0.060904573649168015
+                            },
+                            "verdict": "NO_THREAT",
+                            "tags": [],
+                            "lookupTime": 0,
+                            "activable": true
+                        }
+                    ],
+                    "relatedTaskType": "OSINT_EXTENDED",
+                    "origin": {
+                        "type": "INPUT_FILE",
+                        "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                    },
+                    "resourceReference": {
+                        "type": "OSINT",
+                        "name": "osint",
+                        "ID": "8072ff09-5a1e-4e93-a21c-cf110446cd89"
+                    },
+                    "mediaType": {
+                        "string": "application/octet-stream",
+                        "slash": 11,
+                        "semicolon": 24,
+                        "parameters": {}
+                    },
+                    "signalGroupsByID": {
+                        "I001": {
+                            "identifier": "I001",
+                            "recommendsFullScan": false,
+                            "description": "OSINT source detected benign resource(s)",
+                            "averageSignalStrength": 0.1,
+                            "peakSignalStrength": 0.1,
+                            "finalSignalStrength": 0.1,
+                            "verdict": {
+                                "verdict": "NO_THREAT",
+                                "threatLevel": 0.1,
+                                "confidence": 1
+                            },
+                            "allTags": [],
+                            "signals": [
+                                {
+                                    "strength": 0.1,
+                                    "isStrictlyBasedOnInputData": false,
+                                    "signalReadable": "OSINT provider \"OFFLINE_URL_REPUTATION\" detected resource \"http://yl.ml.md\" as \"NO_THREAT\"",
+                                    "additionalInfo": "http://yl.ml.md",
+                                    "originPath": "osint.results.verdict",
+                                    "originType": "INPUT_FILE",
+                                    "originIdentifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+                                    "impactsFinalVerdict": true
+                                }
+                            ]
+                        }
+                    },
+                    "signalGroups": [
+                        {
+                            "identifier": "I001",
+                            "recommendsFullScan": false,
+                            "description": "OSINT source detected benign resource(s)",
+                            "averageSignalStrength": 0.1,
+                            "peakSignalStrength": 0.1,
+                            "finalSignalStrength": 0.1,
+                            "verdict": {
+                                "verdict": "NO_THREAT",
+                                "threatLevel": 0.1,
+                                "confidence": 1
+                            },
+                            "allTags": [],
+                            "signals": [
+                                {
+                                    "strength": 0.1,
+                                    "isStrictlyBasedOnInputData": false,
+                                    "signalReadable": "OSINT provider \"OFFLINE_URL_REPUTATION\" detected resource \"http://yl.ml.md\" as \"NO_THREAT\"",
+                                    "additionalInfo": "http://yl.ml.md",
+                                    "originPath": "osint.results.verdict",
+                                    "originType": "INPUT_FILE",
+                                    "originIdentifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+                                    "impactsFinalVerdict": true
+                                }
+                            ]
+                        }
+                    ],
+                    "allTags": [],
+                    "originVerdicts": [
+                        {
+                            "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+                            "verdict": {
+                                "verdict": "NO_THREAT",
+                                "threatLevel": 0.1,
+                                "confidence": 1
+                            }
+                        }
+                    ],
+                    "verdict": {
+                        "verdict": "NO_THREAT",
+                        "threatLevel": 0.1,
+                        "confidence": 1
+                    },
+                    "notifications": []
+                },
+                "af5cf32b-caef-42d6-9cd0-7c6544d278e6": {
+                    "results": [
+                        {
+                            "resource": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+                            "origin": {
+                                "type": "INPUT_FILE",
+                                "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                            },
+                            "type": "FILE_HASH_SHA256",
+                            "osintProvider": "OPSWAT_REPUTATION",
+                            "data": {
+                                "last_sandbox_id": [
+                                    {
+                                        "sandbox_id": "6644972262348868e69955f6",
+                                        "system": "filescanio",
+                                        "date": "2024-05-15T11:06:22.449Z"
+                                    }
+                                ],
+                                "votes": {
+                                    "up": 0,
+                                    "down": 0
+                                },
+                                "last_start_time": "2024-05-15T11:06:12.266Z",
+                                "scan_result_history_length": 2,
+                                "sandbox": true,
+                                "file_id": "bzI0MDUxNXR1V0RGdTQ0Q0I",
+                                "data_id": "bzI0MDUxNXR1V0RGdTQ0Q0JFY3R4Q1g2Z2p0_mdaas",
+                                "sanitized": {
+                                    "result": "Allowed",
+                                    "progress_percentage": 100,
+                                    "sha256": "B65B4A02F4492FA3642FB0697D06DADBAAFEA18DA59BC05062ADECBD10079C16"
+                                },
+                                "process_info": {
+                                    "progress_percentage": 100,
+                                    "result": "Allowed",
+                                    "post_processing": {
+                                        "converted_destination": "gabi_bogre_sanitized_by_OPSWAT_MDAAS.png",
+                                        "converted_to": "png",
+                                        "sanitization_details": {
+                                            "description": "Sanitized successfully, no sanitization details available.",
+                                            "details": []
+                                        },
+                                        "actions_ran": "Sanitized",
+                                        "actions_failed": "",
+                                        "copy_move_destination": ""
+                                    },
+                                    "blocked_reason": "",
+                                    "profile": "multiscan_dlp_sanitize",
+                                    "verdicts": [
+                                        "No Threat Detected"
+                                    ],
+                                    "blocked_reasons": []
+                                },
+                                "scan_results": {
+                                    "scan_details": {
+                                        "Comodo": {
+                                            "scan_time": 5,
+                                            "def_time": "2024-05-13T00:41:48.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "AhnLab": {
+                                            "scan_time": 2,
+                                            "def_time": "2024-05-14T00:00:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "TACHYON": {
+                                            "scan_time": 20,
+                                            "def_time": "2024-05-13T00:00:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "RocketCyber": {
+                                            "scan_result_i": 23,
+                                            "scan_time": 1,
+                                            "def_time": "2024-05-13T00:00:00.000Z",
+                                            "threat_found": ""
+                                        },
+                                        "Quick Heal": {
+                                            "scan_time": 1,
+                                            "def_time": "2024-05-12T22:18:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Bkav Pro": {
+                                            "scan_time": 218,
+                                            "def_time": "2024-05-13T15:30:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "CMC": {
+                                            "scan_time": 4,
+                                            "def_time": "2024-05-13T17:43:43.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Avira": {
+                                            "scan_time": 6,
+                                            "def_time": "2024-05-13T09:55:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "K7": {
+                                            "scan_time": 1,
+                                            "def_time": "2024-05-13T01:20:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Xvirus Anti-Malware": {
+                                            "scan_time": 149,
+                                            "def_time": "2024-05-12T19:35:03.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "NANOAV": {
+                                            "scan_time": 3,
+                                            "def_time": "2024-05-13T04:26:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Sophos": {
+                                            "scan_time": 27,
+                                            "def_time": "2024-05-13T00:46:24.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Emsisoft": {
+                                            "scan_time": 8,
+                                            "def_time": "2024-05-13T03:35:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "ClamAV": {
+                                            "scan_time": 89,
+                                            "def_time": "2024-05-13T09:19:51.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "IKARUS": {
+                                            "scan_time": 10,
+                                            "def_time": "2024-05-13T08:50:16.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "CrowdStrike Falcon ML": {
+                                            "scan_result_i": 23,
+                                            "scan_time": 14,
+                                            "def_time": "2024-05-13T00:00:00.000Z",
+                                            "threat_found": ""
+                                        },
+                                        "Lionic": {
+                                            "scan_time": 44,
+                                            "def_time": "2024-05-12T01:05:36.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Bitdefender": {
+                                            "scan_time": 1,
+                                            "def_time": "2024-05-13T08:52:06.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Zillya!": {
+                                            "scan_time": 29,
+                                            "def_time": "2024-05-10T21:09:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Vir__IT ML": {
+                                            "scan_time": 2,
+                                            "def_time": "2024-05-10T12:45:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        },
+                                        "Vir__IT eXplorer": {
+                                            "scan_time": 5,
+                                            "def_time": "2024-05-10T12:45:00.000Z",
+                                            "scan_result_i": 0,
+                                            "threat_found": ""
+                                        }
+                                    },
+                                    "scan_all_result_i": 0,
+                                    "current_av_result_i": 0,
+                                    "start_time": "2024-05-15T11:06:12.266Z",
+                                    "total_time": 218,
+                                    "total_avs": 21,
+                                    "total_detected_avs": 0,
+                                    "progress_percentage": 100,
+                                    "scan_all_result_a": "No Threat Detected",
+                                    "current_av_result_a": "No Threat Detected"
+                                },
+                                "file_info": {
+                                    "file_size": 1293537,
+                                    "upload_timestamp": "2024-05-15T11:06:10.064Z",
+                                    "md5": "B7AF506249DE9D6BA6D7C0670CC307FD",
+                                    "sha1": "A2CB1E638F98A35FF0435D1045CBE96609A7DB44",
+                                    "sha256": "B280719E9F2DD010260E6A023E0D69C64FBEE8B6CBB8669C722A1DA8142D3325",
+                                    "file_type_category": "G",
+                                    "file_type_description": "Portable Network Graphics",
+                                    "file_type_extension": "png",
+                                    "display_name": "gabi_bogre.png"
+                                },
+                                "share_file": 1,
+                                "private_processing": 0,
+                                "rest_version": "4",
+                                "dlp_info": {
+                                    "converted_filename": "",
+                                    "result_template_hash": "d0c1649e31e916de1bdd78ba76434572a20ddb0fe0e1a1ab1c13c911878220a9",
+                                    "anonymization": {
+                                        "result": "not anonymized"
+                                    },
+                                    "crop_embedded_images": {
+                                        "result": "not cropped"
+                                    },
+                                    "detection_policy": {
+                                        "result": "not executed"
+                                    },
+                                    "document_identification": {
+                                        "result": "not executed"
+                                    },
+                                    "errors": {},
+                                    "hits": {},
+                                    "metadata_removal": {
+                                        "result": "not removed"
+                                    },
+                                    "recursive_processing": {
+                                        "result": "not processed"
+                                    },
+                                    "redact": {
+                                        "result": "not redacted"
+                                    },
+                                    "watermark": {
+                                        "result": "not added"
+                                    },
+                                    "verdict": 0
+                                },
+                                "additional_info": [
+                                    "exif"
+                                ],
+                                "stored": true
+                            },
+                            "verdict": "NO_THREAT",
+                            "tags": [],
+                            "lookupTime": 0,
+                            "activable": true
+                        }
+                    ],
+                    "relatedTaskType": "OSINT",
+                    "origin": {
+                        "type": "INPUT_FILE",
+                        "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                    },
+                    "resourceReference": {
+                        "type": "OSINT",
+                        "name": "osint",
+                        "ID": "af5cf32b-caef-42d6-9cd0-7c6544d278e6"
+                    },
+                    "mediaType": {
+                        "string": "application/octet-stream",
+                        "slash": 11,
+                        "semicolon": 24,
+                        "parameters": {}
+                    },
+                    "signalGroupsByID": {
+                        "I001": {
+                            "identifier": "I001",
+                            "recommendsFullScan": false,
+                            "description": "OSINT source detected benign resource(s)",
+                            "averageSignalStrength": 0.1,
+                            "peakSignalStrength": 0.1,
+                            "finalSignalStrength": 0.1,
+                            "verdict": {
+                                "verdict": "NO_THREAT",
+                                "threatLevel": 0.1,
+                                "confidence": 1
+                            },
+                            "allTags": [],
+                            "signals": [
+                                {
+                                    "strength": 0.1,
+                                    "isStrictlyBasedOnInputData": false,
+                                    "signalReadable": "OSINT provider \"OPSWAT_REPUTATION\" detected resource \"b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325\" as \"NO_THREAT\"",
+                                    "additionalInfo": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+                                    "originPath": "osint.results.verdict",
+                                    "originType": "INPUT_FILE",
+                                    "originIdentifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+                                    "impactsFinalVerdict": true
+                                }
+                            ]
+                        }
+                    },
+                    "signalGroups": [
+                        {
+                            "identifier": "I001",
+                            "recommendsFullScan": false,
+                            "description": "OSINT source detected benign resource(s)",
+                            "averageSignalStrength": 0.1,
+                            "peakSignalStrength": 0.1,
+                            "finalSignalStrength": 0.1,
+                            "verdict": {
+                                "verdict": "NO_THREAT",
+                                "threatLevel": 0.1,
+                                "confidence": 1
+                            },
+                            "allTags": [],
+                            "signals": [
+                                {
+                                    "strength": 0.1,
+                                    "isStrictlyBasedOnInputData": false,
+                                    "signalReadable": "OSINT provider \"OPSWAT_REPUTATION\" detected resource \"b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325\" as \"NO_THREAT\"",
+                                    "additionalInfo": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+                                    "originPath": "osint.results.verdict",
+                                    "originType": "INPUT_FILE",
+                                    "originIdentifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+                                    "impactsFinalVerdict": true
+                                }
+                            ]
+                        }
+                    ],
+                    "allTags": [],
+                    "originVerdicts": [
+                        {
+                            "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+                            "verdict": {
+                                "verdict": "NO_THREAT",
+                                "threatLevel": 0.1,
+                                "confidence": 1
+                            }
+                        }
+                    ],
+                    "verdict": {
+                        "verdict": "NO_THREAT",
+                        "threatLevel": 0.1,
+                        "confidence": 1
+                    },
+                    "notifications": []
+                },
+                "08af2f52-ce89-4faf-ad51-2138e529d1d6": {
+                    "exifMetaData": {},
+                    "submitName": "gabi_bogre.png",
+                    "customOpts": {
+                        "scanMode": "FULL",
+                        "triageTimeoutMs": 0,
+                        "triageMaxFileSizeInKilobytes": 20000,
+                        "rapidMode": false,
+                        "runOSINTLookups": true,
+                        "runExtendedOSINTLookups": false,
+                        "runOSINTLookupsOnExtractedFiles": true,
+                        "runFileVisualizer": true,
+                        "runFileDownloaders": true,
+                        "runDomainResolver": true,
+                        "runYaraRulesOnInputFile": true,
+                        "runYaraRulesOnExtractedFiles": true,
+                        "runWhoisRecordLookups": false,
+                        "runIPStackLookupOnExectractedHosts": true,
+                        "runTesseractOCRForImages": true,
+                        "handleSingleURLSubmissionAsURLToFileAnalysis": true,
+                        "enableChatGptTask": false,
+                        "chatGptVerdictTriggers": [
+                            "MALICIOUS"
+                        ]
+                    },
+                    "additionalTasks": [
+                        {
+                            "name": "osint",
+                            "additionalInfo": "FILE_HASH_SHA256",
+                            "ID": "8c9e1e3e-8811-433a-87af-b41ea96f3e0d",
+                            "state": "SUCCESS",
+                            "resourceReference": {
+                                "type": "OSINT",
+                                "name": "osint",
+                                "ID": "af5cf32b-caef-42d6-9cd0-7c6544d278e6"
+                            },
+                            "opcount": 2,
+                            "processTime": 1018
+                        },
+                        {
+                            "name": "domain-resolve",
+                            "additionalInfo": 1,
+                            "ID": "34d5602a-a0d4-4b1b-a9fb-3c4ffa6e8331",
+                            "state": "SUCCESS",
+                            "resourceReference": {
+                                "type": "DOMAIN_RESOLVE",
+                                "name": "domain-resolve",
+                                "ID": "1e9ff699-2b17-4800-8ebc-4607d537e63b"
+                            },
+                            "opcount": 0,
+                            "processTime": 143
+                        },
+                        {
+                            "name": "file-download",
+                            "additionalInfo": 1,
+                            "ID": "e50f51dc-4505-4a48-8b6f-21ad969413cf",
+                            "state": "SUCCESS_PARTIAL",
+                            "resourceReference": {
+                                "type": "FILE_DOWNLOAD",
+                                "name": "file-download",
+                                "ID": "5a1550f9-34d7-4693-b212-ee4f0bb82a90"
+                            },
+                            "opcount": 1,
+                            "processTime": 170
+                        },
+                        {
+                            "name": "osint-ex",
+                            "additionalInfo": "URL",
+                            "ID": "e8507c0b-cf69-45cb-aeb5-763ee5fab04f",
+                            "state": "IN_PROGRESS",
+                            "resourceReference": {
+                                "type": "OSINT",
+                                "name": "osint",
+                                "ID": "8072ff09-5a1e-4e93-a21c-cf110446cd89"
+                            },
+                            "opcount": 2,
+                            "processTime": 0
+                        },
+                        {
+                            "name": "osint-ex",
+                            "additionalInfo": "DOMAIN",
+                            "ID": "c23ac324-4b9a-444c-8907-f81cd909dd50",
+                            "state": "IN_PROGRESS",
+                            "resourceReference": {
+                                "type": "OSINT",
+                                "name": "osint",
+                                "ID": "3caddf8f-924c-4856-a9d4-8e0528772aaa"
+                            },
+                            "opcount": 2,
+                            "processTime": 0
+                        },
+                        {
+                            "name": "osint-fuzzyhash",
+                            "additionalInfo": "FILE_HASH_SHA256",
+                            "ID": "b46f621f-7cf0-4ec8-b3c6-125069dc70a5",
+                            "state": "SUCCESS",
+                            "resourceReference": {
+                                "type": "OSINT",
+                                "name": "osint",
+                                "ID": "bcaa0fd4-abd3-4e44-88a4-a59261d2e47d"
+                            },
+                            "opcount": 2,
+                            "processTime": 11
+                        }
+                    ],
+                    "additionalResources": [
+                        {
+                            "type": "OSINT",
+                            "name": "osint",
+                            "ID": "8072ff09-5a1e-4e93-a21c-cf110446cd89"
+                        },
+                        {
+                            "type": "OSINT",
+                            "name": "osint",
+                            "ID": "3caddf8f-924c-4856-a9d4-8e0528772aaa"
+                        },
+                        {
+                            "type": "OSINT",
+                            "name": "osint",
+                            "ID": "af5cf32b-caef-42d6-9cd0-7c6544d278e6"
+                        },
+                        {
+                            "type": "FILE_DOWNLOAD",
+                            "name": "file-download",
+                            "ID": "5a1550f9-34d7-4693-b212-ee4f0bb82a90"
+                        },
+                        {
+                            "type": "DOMAIN_RESOLVE",
+                            "name": "domain-resolve",
+                            "ID": "1e9ff699-2b17-4800-8ebc-4607d537e63b"
+                        },
+                        {
+                            "type": "OSINT",
+                            "name": "osint",
+                            "ID": "bcaa0fd4-abd3-4e44-88a4-a59261d2e47d"
+                        }
+                    ],
+                    "dieInfo": [],
+                    "isPartialData": false,
+                    "extracted": false,
+                    "fileSize": 1293537,
+                    "digests": {
+                        "SHA-256": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+                        "SHA-1": "a2cb1e638f98a35ff0435d1045cbe96609a7db44",
+                        "SHA-512": "45b6d46906201442ad8313571964a52d578f8fbc44090a8a70ced72099248cfa81beffe1e0a5662808021075cbeee8ed1c8801f4ca2ef1e842848f1b0cd070ee",
+                        "MD5": "b7af506249de9d6ba6d7c0670cc307fd"
+                    },
+                    "metaData": {
+                        "bitsPerPixel": "24",
+                        "colorType": "RGB",
+                        "comments": "0",
+                        "compressionAlgorithm": "PNG Filter",
+                        "entropy": 7.993209920185224,
+                        "forensicAnalysisRecommended": false,
+                        "format": "PNG",
+                        "formatDetails": "Png",
+                        "formatName": "PNG Portable Network Graphics",
+                        "fuzzyfsiohash": "5baaaf3a7bb8e347caec87db1709e395cbcd1294a28e6219b7e484807ca6b4ce",
+                        "height": "800",
+                        "isProgressive": "false",
+                        "isTransparent": "false",
+                        "mimeType": "image/png",
+                        "numberOfImages": "1",
+                        "physicalHeightDpi": "-1",
+                        "physicalHeightInch": "-1.0",
+                        "physicalWidthDpi": "-1",
+                        "physicalWidthInch": "-1.0",
+                        "usesPalette": "false",
+                        "width": "1056"
+                    },
+                    "triageProcessable": true,
+                    "extendedData": {
+                        "fileMagicDescription": "PNG image data, 1056 x 800, 8-bit/color RGB, non-interlaced",
+                        "ssdeep": "24576:wBlnqvKiVHCFkh4VWEd4Ct8VyjfEWZ/4p8enyGAfnrlWCTO4Llo9Q/fYnaBPs1:lvKrXWEd8D8TnrD6B9Q/QnUM"
+                    },
+                    "extractedFiles": [],
+                    "attemptedCertificateExtraction": false,
+                    "extractedUrls": [
+                        {
+                            "origin": {
+                                "type": "INPUT_FILE",
+                                "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                            },
+                            "references": [
+                                {
+                                    "origin": {
+                                        "type": "INPUT_FILE",
+                                        "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                                    },
+                                    "data": "http://yl.ml.md",
+                                    "isActivable": true,
+                                    "dataTotalOccurrences": 1,
+                                    "dataUUID": "38f40d99-2a2a-4a53-973a-f75faf906c80",
+                                    "metaData": {
+                                        "referenceIDs": [
+                                            "deecd541-cdf4-4ac6-bceb-7ff884ad6447"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "extractedDomains": [
+                        {
+                            "origin": {
+                                "type": "INPUT_FILE",
+                                "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                            },
+                            "references": [
+                                {
+                                    "origin": {
+                                        "type": "INPUT_FILE",
+                                        "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                                    },
+                                    "data": "yl.ml.md",
+                                    "isActivable": true,
+                                    "dataTotalOccurrences": 1,
+                                    "dataUUID": "2b72c97c-a20e-4a36-98ff-58476c312efc",
+                                    "metaData": {
+                                        "referenceIDs": [
+                                            "deecd541-cdf4-4ac6-bceb-7ff884ad6447"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "extractedIPs": [],
+                    "extractedEmails": [],
+                    "extractedHashesMD5": [],
+                    "extractedHashesSHA1": [],
+                    "extractedHashesSHA256": [],
+                    "extractedHashesSHA512": [],
+                    "extractedUUIDs": [],
+                    "extractedRegistryPathways": [],
+                    "extractedRevisionSaveIDs": [],
+                    "extractedBTCWallets": [],
+                    "extractedETHWallets": [],
+                    "extractedXMRWallets": [],
+                    "strings": [
+                        {
+                            "origin": {
+                                "type": "INPUT_FILE",
+                                "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                            },
+                            "references": [
+                                {
+                                    "str": "xQTyHUj?1h|?1N",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1808
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "@3DRDfQ\rk4!|G",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 38882
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "& -pJgi^rlj",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 78641
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "Is'^\"ba@\n\\",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 81026
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "kQ+m.Fi;m,l",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 112325
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "`Y\"YVZUYUW",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 121087
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "(HzcJ7%\t*p",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 125631
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "Z:|~~tlnjpa",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 144977
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "pnfz`lh_og6",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 152003
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": ")i))#\nFZE&",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 201859
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "\\.O``hprfz",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 204145
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "74Z7qL<uFrdF|tVtjIyzIsfYw6",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 218735
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "pdB<y\\2uFrtVrlN|zY",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 220114
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "<%;rVztVr|^rzYu&",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 221414
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "8s8qq4{e$}i4wm|",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 223054
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "g#sq,{q,{i4{e8",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 224344
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": ">~VulZ~tFvbA~zYq6",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 225244
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "SEIQuM]CkG{",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 250258
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "PqDE&d'G^$z",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 250864
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "z9zi-ra1t>",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 253016
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "]2D/rg4vo,qw4~",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 255631
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "kcAC,l$5QO",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 268480
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "L&oO&oM&\ti",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 268688
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "?*+'+-5%>5%>9",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 298747
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "jRzFbzFbFf",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 301035
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "bfqAeA^Ua.3'",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 302317
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "v\"##.331++",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 307355
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "um)ti1tq1tq)xa=",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 308336
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": ":qy&~q2~n2M;",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 311592
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "\\JYQVAA^YUUSw",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 314775
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "PDW$\".\"X#%}`\rD",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 343441
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "Mo0j\r]._$>\\",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 359092
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "Km<No?Io?I",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 373124
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "~fys|msnk{eowsu",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 375191
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "c8mh$uh4mh4C",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 378667
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "|FqAcYNmi6",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 382796
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "^qwSokcos]'",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 386591
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "LA{aKGEsWc",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 387831
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "^TQURQQZYI",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 389071
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "x5=soZzfzzfvVFv",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 398915
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "(@$$4\t\tM\"b",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 399799
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": ":gT}jP}fP}",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 423410
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "yH&~ZfA;,v",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 427873
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "8W9?]=?U7;I",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 444040
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "X=mY>kY<iZ:k]:",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 447247
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": ":NViCFA]F^u",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 450783
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "nh%WuR4<\nz",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 454086
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "}jZ|n\\zaYyi[}",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 456388
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "3k^wDYRWPXE.",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 458384
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "#owvYNfY^fiQ&",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 461520
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "UAJMAJmazMQzma*2",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 462476
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "z k2dAi'^=?y>",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 471177
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "4zO7vW~oJ9yOvwB",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 477468
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "|d_Fjra^f9",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 485671
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "LjZjqJjiZ6-/",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 486104
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "g|QtwYvwY6",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 490716
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "FI5T>6T>:H'",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 491114
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "~:ogfIJfINfI^rnZ",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 492370
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "r!&,,1:4>$\"",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 499242
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "[ZTUTPH)(*",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 506132
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "cFV\\PV\\PvlPV",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 506684
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "u<*)<2!24&$8",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 507626
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "s>-&(#1233",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 512375
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "(b\thl!],cW",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 512966
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "\\z|HZRdZjBZv:",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 514119
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": ";21$,!\"*126>06",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 520396
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "hVE4+B[d!-",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 523254
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "ceMfLmVl]v",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 524457
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "V1*o!VHAKw",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 532335
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "b$k|({|(wt8{d",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 535464
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "LTjunZm~ZunJ-",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 535568
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "jKrkS~kC}{+w",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 540789
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "3FoKHOsp_ShocHw=",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 547948
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "PfLxZ<=-12-1",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 560479
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "\nu=Is9As9A",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 561709
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "8ZP|hpBDp<",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 562334
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "2=+3-=9+-9[",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 578341
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "xogmwGygGyWoY",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 579818
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "@UD@|d`|d`b4-1",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 581804
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "gI<$Y$DQWe",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 585537
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "PZ_~RLArlQ\n",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 589036
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "|(Qz.Q9hM)",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 589409
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "dVI]^qe~^q",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 590466
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "NHfqQIccEGG~",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 591789
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "MmnBmnBMN<",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 593725
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "\t\rD-Tf.Rf.R",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 602956
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "-&\"=%!+3M&",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 614918
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "RQ[^U_\\Ygv",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 614938
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": ".ycg\\wsTW]D{UTse\\",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 615700
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "xgc{{{{S]WcUwS",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 619258
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "tA^\n'#:?aNN4",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 630090
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": ",?uY~jy^Jy",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 644349
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "xqQQQQAaQ^nAvF^",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 655495
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": ".)-[RZZZ\\XT",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 657043
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "+.i{\\bFbRzJrFZJzjBJZBRZb\\FB,",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 661561
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "+)9#9)=91)51!%!65!&5!&-1:9!29!25Q",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 663218
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "%%'$%&%%$''",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 664617
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "5>6#.6=6&5:*%J",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 664669
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "P%1)-*>)*6I",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 667704
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "&&5:.5&>-.>%1!#1.=1nkBlF\\tZlTj",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 669202
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "VV!UTFUTFU",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 675270
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": ";1Bbr?U)MUJ",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 679374
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "F[w RWhkgHk",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 683678
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "0'4?'$7'$'?4",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 685430
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "?*ch.}x!}x",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 685541
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "TG_H[oP+21t",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 689996
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "F{gPGWh[wpC[@Ckh]slk",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 690013
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "FWDWgDWgdGgDkGdS[tkgZ~q",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 697713
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "fX{oh{wX[W8",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 700998
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "$Pm}Rmmbue<",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 701074
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "hA>~l;a*ut",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 704489
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "IN\tV(xR)W*\n",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 705825
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "(yl.ml.md&uh*}X",
+                                    "type": "ASCII",
+                                    "dataUUID": "deecd541-cdf4-4ac6-bceb-7ff884ad6447",
+                                    "interesting": true,
+                                    "metaData": {
+                                        "offset": 709062,
+                                        "reason": [
+                                            "IOC_NETWORK"
+                                        ]
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": ">:=<}lPwpt",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 710601
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "j1gt6cdJ9>",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 710622
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "peXTZdtFDRn",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 716817
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "9\rrZccfc#Nl<!C",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 717296
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "AIEu~n^ivfY",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 723734
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "XqaIqVviffizZ",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 728212
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "bSTIJtijLyZByZBIZ|IZ<",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 728291
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": ".24$<4,44\\",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 729283
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "EVJEvjeNZUn:",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 729601
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "d(mYFjIfj)",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 730922
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "HEUyiI~Ei^UqneQNUaNuQ",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 734819
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "Prc&sl!wd1w|",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 735499
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": ".;1\"3>,=6$-&85Z",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 736160
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "4c|ZbTzBTZB8",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 738932
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "}iFRIzRQFRa",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 743217
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": ">6<-6<5*85*8-:$-:$=*85\"",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 744593
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "pMRd`rLpj|XzbDfRT",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 744669
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "!JY!N])N]\tF",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 757275
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "l1j};_<6_<:",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 760772
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "HvYndSn^Y~nIv",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 762987
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "/gT12W10S9|",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 774940
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "0Qb6iXh\"WN",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 776172
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "<_5v6<z&tj.x",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 781843
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "+T97W97W:6U:6U",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 783563
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "?up:~p2vx*vx,",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 800422
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "4MQStskJr9",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 820078
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "0v4hv6jw6j?l1,[",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 822775
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "%bHen\\EN,U",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 828673
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "HmKGM}[]M}",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 838498
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "McyACY~]Y~mi^syA]In}i^MY",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 848235
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "Q'chbaE<\"G)",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 849689
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "H\n /(Ye\nz1",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 861186
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "66Wcmjqbmnu",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 874512
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "2*EL\n\\EL\nH",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 875838
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "=y)uj6vtjd",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 883166
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "I#\tjEe:10F",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 894690
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "O_=8y\rubL]o;s",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 903635
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "jYd5#SIKWP",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 918318
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "7UnVWX4UV]",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 922527
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "s/!)UF'iyt",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 929296
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "DKtbC|WkrO",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 935016
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "@+A^j8Q\n\ntR",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 938213
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "@]{{]GG}WOCw",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 951366
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "Z-3Y)o0\\QS",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 958958
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "!\n=/'}6lOiiD",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 968773
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "W+vSB4c`6+",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 969326
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": ">X58U5<]=2S=2S3:[",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 982709
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": ",kk/mm+ni/i",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 984662
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "by[HBaQQ>\r",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 988380
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": ":FeGOeGOIk",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 989936
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "J!C\\nSI\\:y",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 999377
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "]$O xjy<F5",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1001564
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "w`pIG{WkC_[",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1015091
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "JkRmNJ8-)9",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1017470
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "Tm ^%GRr *",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1032457
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "cAmmmcMeSe",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1034547
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "HGytle|leble",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1060281
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "S>qBY}Mu}]",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1075593
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "|BmymeYuyEUieE",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1079283
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "hQR_]R_]ZWYY_]\\QTRVX^VX]Q\\S^X",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1081078
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "tQ[ZR]R^U\\T",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1084773
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "|j$+v##z=+v#",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1090338
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "8?gGNf^FzVJjZ %",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1090570
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "3Y>:]66]26]2",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1092472
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "W?1]7>U7>U",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1102433
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "M DOYGOi{wI{Gi{wi",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1103021
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "#;q[VbVzbvnVj",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1108952
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "`Y{wYK{YKgE[ge{WYkkis[Ykkyk",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1109196
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "0CCsqCcIcSqCCa]",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1109224
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "UsQ}CISkIssis",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1109304
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "(lj)lj)jn/n",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1109326
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "59;19=6>9<",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1110859
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "0133>==6552918>",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1113322
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "odhhbbljrbffrnn",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1113373
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "kqebz~trfhx",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1117625
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "9vxny~t|d|",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1120852
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "p)1ZIMtd';",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1127716
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "Qgj\n6TNU2VO%",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1146050
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "kJm]h(l]fb",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1167780
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "?>k<9o=9o=:",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1175341
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "hr\rN\"i1_cI",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1190521
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "aPwpYMy+\t7",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1207658
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "`h<0m-m!Ev",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1208499
+                                    },
+                                    "origin": "INPUT_FILE"
+                                },
+                                {
+                                    "str": "]TBL5x?aVd0\n",
+                                    "type": "ASCII",
+                                    "metaData": {
+                                        "offset": 1232071
+                                    },
+                                    "origin": "INPUT_FILE"
+                                }
+                            ]
+                        },
+                        {
+                            "origin": {
+                                "type": "IMAGE_OCR",
+                                "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                            },
+                            "references": [
+                                {
+                                    "str": " \n",
+                                    "type": "ASCII",
+                                    "origin": "IMAGE_OCR"
+                                }
+                            ]
+                        }
+                    ],
+                    "yaraMatches": [],
+                    "packersYara": [],
+                    "origin": {
+                        "type": "INPUT_FILE",
+                        "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                    },
+                    "resourceReference": {
+                        "type": "TRANSFORM_FILE",
+                        "name": "file",
+                        "ID": "08af2f52-ce89-4faf-ad51-2138e529d1d6"
+                    },
+                    "isDistributed": true,
+                    "mediaType": {
+                        "string": "image/png",
+                        "slash": 5,
+                        "semicolon": 9,
+                        "parameters": {}
+                    },
+                    "signalGroupsByID": {},
+                    "signalGroups": [],
+                    "allTags": [
+                        {
+                            "source": "MEDIA_TYPE",
+                            "sourceIdentifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+                            "isRootTag": true,
+                            "tag": {
+                                "name": "png",
+                                "synonyms": [],
+                                "descriptions": [],
+                                "verdict": {
+                                    "verdict": "NO_THREAT",
+                                    "threatLevel": 0.1,
+                                    "confidence": 1
+                                }
+                            }
+                        }
+                    ],
+                    "originVerdicts": [],
+                    "verdict": {
+                        "verdict": "NO_THREAT",
+                        "threatLevel": 0.1,
+                        "confidence": 1
+                    },
+                    "notifications": [],
+                    "private": false
+                }
+            },
+            "iocs": {
+                "sha256": [
+                    {
+                        "data": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+                        "origins": [
+                            {
+                                "type": "INPUT_FILE",
+                                "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                            }
+                        ],
+                        "verdict": "NO_THREAT",
+                        "isInteresting": false
+                    }
+                ],
+                "domain": [
+                    {
+                        "data": "yl.ml.md",
+                        "origins": [
+                            {
+                                "type": "INPUT_FILE",
+                                "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                            }
+                        ],
+                        "verdict": "UNKNOWN",
+                        "isInteresting": false
+                    }
+                ],
+                "url": [
+                    {
+                        "data": "http://yl.ml.md",
+                        "origins": [
+                            {
+                                "type": "INPUT_FILE",
+                                "identifier": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325"
+                            }
+                        ],
+                        "verdict": "UNKNOWN",
+                        "isInteresting": false
+                    }
+                ]
+            },
+            "file": {
+                "name": "gabi_bogre.png",
+                "hash": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+                "type": "other"
+            },
+            "filesDownloadFinished": true,
+            "additionalStepsRunning": [],
+            "additionalStepsDone": true,
+            "created_date": "08/07/2024, 13:27:26",
+            "defaultOptionsUsed": true,
+            "scanOptions": {
+                "scan_mode": "full",
+                "rapid_mode": false,
+                "osint": true,
+                "extended_osint": true,
+                "extracted_files_osint": true,
+                "visualization": true,
+                "files_download": true,
+                "resolve_domains": true,
+                "input_file_yara": true,
+                "extracted_files_yara": true,
+                "whois": true,
+                "ips_meta": true,
+                "images_ocr": true
+            },
+            "estimatedTime": "17",
+            "estimated_progress": 1.0
+        }
+    }
+}

@@ -10,6 +10,7 @@ from assemblyline_v4_service.common.result import (
 FINAL_VERDICT_HEURISTIC_ID = {
     "benign": 1,
     "informational": 3,
+    "no_threat": 3,
     "unknown": 5,
     "suspicious": 7,
     "likely_malicious": 9,
@@ -19,6 +20,7 @@ FINAL_VERDICT_HEURISTIC_ID = {
 SIGNALS_HEURISTIC_ID = {
     "benign": 2,
     "informational": 4,
+    "no_threat": 4,
     "unknown": 6,
     "suspicious": 8,
     "likely_malicious": 10,

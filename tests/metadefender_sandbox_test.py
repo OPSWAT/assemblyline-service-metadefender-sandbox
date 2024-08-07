@@ -95,6 +95,31 @@ class TestMetaDefenderSandboxResult:
         assert target == compact_result
 
     @staticmethod
+    def test_parse_compact_result_no_threat():
+        raw_response = (
+            (util_load_json("no_threat.json"))
+            .get("reports", {})
+            .get("357042f5-bbf9-4486-b7c4-351495a94a13", {})
+        )
+        compact_result = metadefender_sandbox_result.parse_compact_result(
+            raw_response,
+            "357042f5-bbf9-4486-b7c4-351495a94a13",
+            "66b3763be7dbbbdfcd0a6a96",
+        )
+        target = {
+            "Verdict": "NO_THREAT",
+            "Name": "gabi_bogre.png",
+            "File Magic": "image/png",
+            "SHA-256": "b280719e9f2dd010260e6a023e0d69c64fbee8b6cbb8669c722a1da8142d3325",
+            "Report ID": "357042f5-bbf9-4486-b7c4-351495a94a13",
+            "Submission ID": "66b3763be7dbbbdfcd0a6a96",
+            "Submission Date": "08/07/2024, 13:27:26",
+            "Tags": ["png"],
+            "MITRE Techniques": [],
+        }
+        assert target == compact_result
+
+    @staticmethod
     def test_parse_compact_result_badfile2():
         raw_response = (
             (util_load_json("badfile2.json"))
