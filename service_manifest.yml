@@ -40,12 +40,12 @@ heuristics:
     filetype: "*"
     heur_id: 3
     name: MetaDefender Sandbox verdict is no threat.
-    score: 150
+    score: 0
   - description: MetaDefender Sandbox signal group is no threat/informational.
     filetype: "*"
     heur_id: 4
     name: No threat indicators
-    score: 150
+    score: 0
   - description: MetaDefender Sandbox determined that the file is unknown.
     filetype: "*"
     heur_id: 5
