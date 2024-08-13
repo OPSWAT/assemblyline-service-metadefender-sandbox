@@ -18,7 +18,7 @@ Heuristic score is the following:
 | score | MetaDefender Sandbox verdict |
 |------:|------------------------------|
 | -1000 | BENIGN                       |
-|   150 | NO THREAT                    |
+|     0 | NO THREAT                    |
 |   299 | UNKNOWN                      |
 |   500 | SUSPICIOUS                   |
 |   850 | LIKELY MALICIOUS             |
